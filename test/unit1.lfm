@@ -1,0 +1,33 @@
+object Form1: TForm1
+  Left = 414
+  Height = 277
+  Top = 130
+  Width = 320
+  Caption = 'Form1'
+  ClientHeight = 277
+  ClientWidth = 320
+  OnCreate = FormCreate
+  Position = poDefault
+  LCLVersion = '2.0.6.0'
+  object Panel1: TPanel
+    Left = 4
+    Height = 37
+    Top = 236
+    Width = 312
+    Align = alBottom
+    Alignment = taLeftJustify
+    BorderSpacing.Around = 4
+    BevelWidth = 4
+    BorderWidth = 4
+    BorderStyle = bsSingle
+    Caption = 'Panel1'
+    ParentColor = False
+    TabOrder = 0
+  end
+  object Timer: TTimer
+    Interval = 500
+    OnTimer = TimerTimer
+    left = 40
+    top = 20
+  end
+end
