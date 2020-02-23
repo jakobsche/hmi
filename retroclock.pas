@@ -391,18 +391,21 @@ begin
   HourPtr.Radius := MinPtrRadius * 3 div 3;
   HourPtr.Offset := -Pi / 2;
   HourPtr.Pen.Color := clWhite;
+  HourPtr.Pen.Width := 4;
   AddElement(HourPtr);
   MinPtr := TRotativePointer.Create(Self);
   MinPtr.Center := Scale.Center;
   MinPtr.Radius := MinPtrRadius;
   MinPtr.Offset := -Pi / 2;
   MinPtr.Pen.Color := clYellow;
+  MinPtr.Pen.Width := 4;
   AddElement(MinPtr);
   SecPtr := TRotativePointer.Create(Self);
   SecPtr.Center := Scale.Center;
   SecPtr.Radius := MinPtrRadius;
   SecPtr.Offset := -Pi / 2;
   SecPtr.Pen.Color := clRed;
+  SecPtr.Pen.Width := 4;
   AddElement(SecPtr);
 end;
 
