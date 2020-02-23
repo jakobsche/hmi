@@ -1,6 +1,6 @@
 # HMI
 
-This is a Lazarus package containing a control, an abstract vector graphics element and a drawing class, that can be connected with the control to draw something on its canvas.
+This is a Lazarus package containing a control, an abstract vector graphics element and a drawing class, that can be connected with the control to draw something on its canvas. There are also few descendants of TElement that draw some simple geometric shapes.
 
 Other than raster graphic images, the drawing is always drawn with the available screen resolution and can be interactively.
 
