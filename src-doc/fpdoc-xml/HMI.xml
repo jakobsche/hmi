@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generated using FPDoc - (c) 2000-2012 FPC contributors and Sebastian Guenther, sg@freepascal.org -->
+<fp-refdoc>
+  <unit name="HMI">
+    <interface>
+      <uses>
+        <unit-ref name="System"/>
+        <unit-ref name="RetroClock"/>
+        <unit-ref name="DrawnControl"/>
+        <unit-ref name="LazarusPackageIntf"/>
+      </uses>
+    </interface>
+  </unit>
+</fp-refdoc>

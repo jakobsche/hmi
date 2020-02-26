@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<docproject>
+  <options>
+    <option name="ostarget" value="Darwin"/>
+    <option name="cputarget" value="x86_64"/>
+    <option name="format" value="IPF"/>
+    <option name="hide-protected" value="false"/>
+    <option name="warn-no-node" value="false"/>
+    <option name="show-private" value="false"/>
+    <option name="stop-on-parser-error" value="false"/>
+    <option name="parse-impl" value="false"/>
+    <option name="dont-trim" value="false"/>
+    <option name="emit-notes" value="false"/>
+  </options>
+  <packages>
+    <package name="HMI" output="./src-doc/hmi.ipf" content="">
+      <units>
+        <unit file="hmi.pas" options=""/>
+        <unit file="retroclock.pas" options=""/>
+        <unit file="drawncontrol.pas" options=""/>
+      </units>
+      <descriptions>
+        <description file="./docs/drawncontrol.xml"/>
+      </descriptions>
+      <imports/>
+    </package>
+  </packages>
+</docproject>

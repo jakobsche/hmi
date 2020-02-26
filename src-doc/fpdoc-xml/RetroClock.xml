@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generated using FPDoc - (c) 2000-2012 FPC contributors and Sebastian Guenther, sg@freepascal.org -->
+<fp-refdoc>
+  <unit name="RetroClock">
+    <interface>
+      <uses>
+        <unit-ref name="System"/>
+        <unit-ref name="Classes"/>
+        <unit-ref name="SysUtils"/>
+        <unit-ref name="LResources"/>
+        <unit-ref name="Forms"/>
+        <unit-ref name="Controls"/>
+        <unit-ref name="Graphics"/>
+        <unit-ref name="Dialogs"/>
+        <unit-ref name="DrawnControl"/>
+      </uses>
+      <class name="TClockScaleLines" visibility="published" parentclass="TDrawing">
+        <procedure name="Resize" override="true" visibility="protected"/>
+        <procedure name="Zoom" override="true" visibility="protected">
+          <argument name="CP" type="TPoint"/>
+          <argument name="Factor" type="Extended"/>
+        </procedure>
+        <constructor name="Create" override="true" visibility="public">
+          <argument name="AOwner" type="TComponent"/>
+        </constructor>
+        <property name="Center" type="TPoint" writable="true"/>
+        <property name="Lines" type="TLine">
+          <argument name="Index" type="TClockScaleLineIndex"/>
+        </property>
+        <property name="Radius" type="Integer" writable="true"/>
+        <property name="BaseLineLength" type="Integer" writable="true"/>
+      </class>
+      <class name="TClockScale" visibility="public" parentclass="TDrawing">
+        <procedure name="Resize" override="true" visibility="protected"/>
+        <procedure name="Shift" override="true" visibility="protected">
+          <argument name="V" type="TPoint"/>
+        </procedure>
+        <constructor name="Create" override="true" visibility="public">
+          <argument name="AOwner" type="TComponent"/>
+        </constructor>
+        <property name="Center" type="TPoint" writable="true"/>
+        <property name="Radius" type="Integer" writable="true"/>
+      </class>
+      <class name="TClock" visibility="published" parentclass="TDrawing">
+        <procedure name="Draw" override="true" visibility="protected"/>
+        <procedure name="Resize" override="true" visibility="protected"/>
+        <constructor name="Create" override="true" visibility="public">
+          <argument name="AOwner" type="TComponent"/>
+        </constructor>
+        <property name="Center" type="TPoint" writable="true"/>
+        <property name="Frame" type="TRectangle" writable="true"/>
+        <property name="Scale" type="TClockScale" writable="true"/>
+        <property name="HourPtr" type="TRotativePointer" writable="true"/>
+        <property name="MinPtr" type="TRotativePointer" writable="true"/>
+        <property name="SecPtr" type="TRotativePointer" writable="true"/>
+        <property name="Time" type="TDateTime"/>
+        <property name="Diameter" type="Integer" writable="true"/>
+        <property name="Radius" type="Integer" writable="true"/>
+      </class>
+      <class name="TRetroClock" visibility="published" parentclass="TDrawnControl">
+        <class_function name="GetDrawingClass" override="true" visibility="protected">
+          <return type="TDrawingClass"/>
+        </class_function>
+        <constructor name="Create" override="true" visibility="public">
+          <argument name="AOwner" type="TComponent"/>
+        </constructor>
+        <property name="Clock" type="TClock"/>
+        <property name="Align"/>
+        <property name="Anchors"/>
+      </class>
+      <range end="59" name="TClockScaleLineIndex" start="0"/>
+      <procedure name="Register"/>
+    </interface>
+  </unit>
+</fp-refdoc>

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>TElement</title>
+<link rel="stylesheet" href="../fpdoc.css" type="text/css">
+
+</head>
+<body>
+<table class="bar" width="100%" border="0" cellpadding="4" cellspacing="0">
+<tr>
+<td><b>[<a href="../drawncontrol/index.html">Overview</a>][<a href="../drawncontrol/index-3.html">Types</a>][<a href="../drawncontrol/index-4.html">Classes</a>][<a href="../drawncontrol/index-5.html">Procedures and functions</a>][<a href="../drawncontrol/index-8.html">Index</a>]</b></td>
+<td align="right"><span class="bartitle">Reference for unit 'DrawnControl' (<a href="../index.html">#HMI</a>)</span></td>
+</tr>
+</table>
+<h1>TElement</h1>
+<p>[<a href="../drawncontrol/telement-1.html" onClick="window.open('../drawncontrol/telement-1.html', 'list', 'dependent=yes,resizable=yes,scrollbars=yes,height=400,width=300'); return false;">Properties</a> (<a href="../drawncontrol/telement-2.html" onClick="window.open('../drawncontrol/telement-2.html', 'list', 'dependent=yes,resizable=yes,scrollbars=yes,height=400,width=300'); return false;">by Name</a>)] [<a href="../drawncontrol/telement-3.html" onClick="window.open('../drawncontrol/telement-3.html', 'list', 'dependent=yes,resizable=yes,scrollbars=yes,height=400,width=300'); return false;">Methods</a> (<a href="../drawncontrol/telement-4.html" onClick="window.open('../drawncontrol/telement-4.html', 'list', 'dependent=yes,resizable=yes,scrollbars=yes,height=400,width=300'); return false;">by Name</a>)] [<a href="../drawncontrol/telement-5.html" onClick="window.open('../drawncontrol/telement-5.html', 'list', 'dependent=yes,resizable=yes,scrollbars=yes,height=400,width=300'); return false;">Events</a> (<a href="../drawncontrol/telement-6.html" onClick="window.open('../drawncontrol/telement-6.html', 'list', 'dependent=yes,resizable=yes,scrollbars=yes,height=400,width=300'); return false;">by Name</a>)] </p>
+<p>base class for elements, that can be added to a TDrawing object</p>
+<h2>Declaration</h2>
+<p>Source position: drawncontrol.pas line 20</p>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td><p><tt><span class="code"><span class="kw">type</span> TElement <span class="sym">=</span> <span class="kw">class</span><span class="sym">(</span>TComponent<span class="sym">)</span> <span class="kw">end</span><span class="sym">;</span></span></tt></p></td>
+</tr>
+<tr>
+<td><p><tt><span class="code"><span class="kw">protected</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">class function </span><a href="../drawncontrol/telement.getvectordirection.html">GetVectorDirection</a><span class="sym">();</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt">calculates the angle of a vector being given in screen coordinates. </p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">class function </span><a href="../drawncontrol/telement.getvectorlength.html">GetVectorLength</a><span class="sym">();</span></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt">calculates the absolute value (length) of the given vector</p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">class procedure </span><a href="../drawncontrol/telement.setvectordirection.html">SetVectorDirection</a><span class="sym">();</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">class procedure </span><a href="../drawncontrol/telement.setvectorlength.html">SetVectorLength</a><span class="sym">();</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">class procedure </span><a href="../drawncontrol/telement.vectorrotate.html">VectorRotate</a><span class="sym">();</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">class procedure </span><a href="../drawncontrol/telement.vectorzoom.html">VectorZoom</a><span class="sym">();</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">procedure </span><a href="../drawncontrol/telement.notification.html">Notification</a><span class="sym">();</span><span class="kw"> override</span><span class="sym">;</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">procedure </span><a href="../drawncontrol/telement.shift.html">Shift</a><span class="sym">();</span><span class="kw"> virtual</span><span class="sym">;</span><span class="kw"> abstract</span><span class="sym">;</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">procedure </span><a href="../drawncontrol/telement.rotate.html">Rotate</a><span class="sym">();</span><span class="kw"> virtual</span><span class="sym">;</span><span class="kw"> abstract</span><span class="sym">;</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">procedure </span><a href="../drawncontrol/telement.zoom.html">Zoom</a><span class="sym">();</span><span class="kw"> virtual</span><span class="sym">;</span><span class="kw"> abstract</span><span class="sym">;</span></span></tt></p></td>
+</tr>
+<tr>
+<td><p><tt><span class="code"><span class="kw">public</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">destructor </span><a href="../drawncontrol/telement.destroy.html">Destroy</a><span class="sym">;</span><span class="kw"> override</span><span class="sym">;</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">property </span><a href="../drawncontrol/telement.brush.html">Brush</a><span class="sym">: </span>TBrush<span class="sym">;</span>  [r]</span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">property </span><a href="../drawncontrol/telement.pen.html">Pen</a><span class="sym">: </span>TPen<span class="sym">;</span>  [r]</span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">property </span><a href="../drawncontrol/telement.control.html">Control</a><span class="sym">: </span>TGraphicControl<span class="sym">;</span>  [rw]</span></tt></p></td>
+</tr>
+<tr>
+<td><p><tt><span class="code"></span></tt></p></td>
+</tr>
+</table>
+<h2>Inheritance</h2>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" valign="top"><p><tt><span class="code"><a href="../drawncontrol/telement.html">TElement</a></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt">base class for elements, that can be added to a TDrawing object</p></td>
+</tr>
+<tr>
+<td align="center">|</td>
+</tr>
+<tr>
+<td align="center"><p><tt><span class="code">TComponent</span></tt></p></td>
+</tr>
+<tr>
+<td align="center">?</td>
+</tr>
+<tr>
+<td align="center"><p><tt><span class="code">TObject</span></tt></p></td>
+</tr>
+</table>
+<h2>Description</h2>
+<p>Objects of this class are usually placed on a TDrawing object. Because TElement is abstract, it is necessary to derive concrete element classes from it first. You can use the protected methods, especially class methods for vector handling, to design. The design has to happen by overriding the abstract and other virtual methods. </p>
+<h2>See also</h2>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top"><p><a href="../drawncontrol/tline.html">#HMI.drawncontrol.TLine</a></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt">straight line that starts at SP and ends at EP</p></td>
+</tr>
+<tr>
+<td valign="top"><p><a href="../drawncontrol/trectangle.html">#HMI.drawncontrol.TRectangle</a></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt">TElement descendant to add a rectangle to a drawing</p></td>
+</tr>
+<tr>
+<td valign="top"><p><a href="../drawncontrol/trotativepointer.html">#HMI.drawncontrol.TRotativePointer</a></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt">pointer rotating around the point CP by changing the value of Angle</p></td>
+</tr>
+</table>
+</body>
+</html>

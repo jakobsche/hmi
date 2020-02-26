@@ -1,0 +1,309 @@
+{\rtf1{\fonttbl{\f0\fswiss Helvetica{\*\falt Arial};}{\f1\fmodern Courier{\*\falt Courier New};}{\f2\froman Times{\*\falt Times New Roman};}}{\stylesheet{\s1\li0\fi0\ql\sb240\sa60\keepn\f2\b\fs32 Section Title;}{\s2\ql\sb30\sa30\keepn\b0\i0\scaps1\f1\fs28 Table Title;}{\s3\li0\fi0\qc\sb240\sa60\keepn\f2\b\scaps1\fs28 Listing Title;}{\s4\li30\fi30\ql\f2\fs24 Listing Contents;}{\s5\li0\fi0\ql\sb240\sa60\keepn\f2\b\fs40 Chapter;}{\s6\li0\fi0\ql\sb240\sa60\keepn\f2\b\fs32 Section;}{\s7\li0\fi0\ql\sb240\sa60\keepn\f2\b\fs28 Subsection;}{\s8\li0\fi0\ql\sb240\sa60\keepn\f2\b\fs24 Subsubsection;}{\s9\li30\fi10\ql\sb60\keepn\f2\fs24 Description titles;}{\s10\li30\fi30\ql\fs24 Description;}{\s11\li0\fi0\ql\fs24 Source Example;}}{\pard\s5 1   Reference for unit 'DrawnControl'\par}{\bkmkstart hmi:drawncontrol}{\bkmkend hmi:drawncontrol}{\pard\s6 1.1   Used units\par}\pard\qc\s3 Used units by unit 'DrawnControl'\par\trowd\pard\intbl Name\cell\pard\intbl Page\cell\row\par\trowd\pard\intbl Classes\cell\pard\intbl Pageref to hmi:drawncontrol:classes\cell\row\par\trowd\pard\intbl Controls\cell\pard\intbl Pageref to hmi:drawncontrol:controls\cell\row\par\trowd\pard\intbl Dialogs\cell\pard\intbl Pageref to hmi:drawncontrol:dialogs\cell\row\par\trowd\pard\intbl Forms\cell\pard\intbl Pageref to hmi:drawncontrol:forms\cell\row\par\trowd\pard\intbl Graphics\cell\pard\intbl Pageref to hmi:drawncontrol:graphics\cell\row\par\trowd\pard\intbl LResources\cell\pard\intbl Pageref to hmi:drawncontrol:lresources\cell\row\par\trowd\pard\intbl System\cell\pard\intbl Pageref to hmi:drawncontrol:system\cell\row\par\trowd\pard\intbl SysUtils\cell\pard\intbl Pageref to hmi:drawncontrol:sysutils\cell\row\par\par{\pard\s6 1.2   Overview\par}The unit implements a TGraphicControl class that can display a drawing on its canvas. The interface provides methods to override, if the drawing is not static, for example, that can change, if the size or position of the control or the time change. \par{\pard\s6 1.3   \par}{\bkmkstart hmi:drawncontrol:tdrawing topic 1}{\bkmkend hmi:drawncontrol:tdrawing topic 1}\par{\pard\s6 1.4   Constants, types and variables\par}{\bkmkstart drawncontrolconststypesvars}{\bkmkend drawncontrolconststypesvars}{\pard\s7 1.4.1   Types\par}{\bkmkstart drawncontroltypes}{\bkmkend drawncontroltypes}\par{\pard\s4 TDrawingClass = Class of TDrawing
+}
+{\bkmkstart hmi:drawncontrol:tdrawingclass}{\bkmkend hmi:drawncontrol:tdrawingclass}{\xe{\v TDrawingClass}}The class method #HMI.drawncontrol.TDrawnControl.GetDrawingClass{\field{\*\fldinst{\lang1024 PAGEREF BMhmi:drawncontrol:tdrawncontrol:getdrawingclass \\*MERGEFORMAT }}{\\fldrslt{hmi:drawncontrol:tdrawncontrol:getdrawingclass}}} uses this to say, for which drawing class the control is made. \par \par{\pard\s6 1.5   Procedures and functions\par}{\bkmkstart drawncontrolfunctions}{\bkmkend drawncontrolfunctions}{\pard\s7 1.5.1   Register\par}{\bkmkstart hmi:drawncontrol:register}{\bkmkend hmi:drawncontrol:register}{\xe{\v Register}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Register
+}
+\par\s9 Visibility\pard\par\s10\f2 default
+}\par{\pard\s6 1.6   IDrawnControl\par}{\bkmkstart hmi:drawncontrol:idrawncontrol}{\bkmkend hmi:drawncontrol:idrawncontrol}{\xe{\v IDrawnControl}}\par{\pard\s6 1.7   TCircle\par}{\bkmkstart hmi:drawncontrol:tcircle}{\bkmkend hmi:drawncontrol:tcircle}{\xe{\v TCircle}}{\pard\s7 1.7.1   Description\par}TElement descendant to add a circle to a TDrawing object\par{\pard\s7 1.7.2   Property overview\par}{\bkmkstart hmi:drawncontrol:tcircle:properties}{\bkmkend hmi:drawncontrol:tcircle:properties}\par\trowd\pard\intbl Page\cell\pard\intbl Properties\cell\pard\intbl Access \cell\pard\intbl Description \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tcircle:center\cell\pard\intbl Center\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tcircle:diameter\cell\pard\intbl Diameter\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tcircle:radius\cell\pard\intbl Radius\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\par{\pard\s7 1.7.3   TCircle.Center\par}{\bkmkstart hmi:drawncontrol:tcircle:center}{\bkmkend hmi:drawncontrol:tcircle:center}{\xe{\v TCircle.Center}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Center : TPoint
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 1.7.4   TCircle.Diameter\par}{\bkmkstart hmi:drawncontrol:tcircle:diameter}{\bkmkend hmi:drawncontrol:tcircle:diameter}{\xe{\v TCircle.Diameter}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Diameter : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 1.7.5   TCircle.Radius\par}{\bkmkstart hmi:drawncontrol:tcircle:radius}{\bkmkend hmi:drawncontrol:tcircle:radius}{\xe{\v TCircle.Radius}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Radius : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 published
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s6 1.8   TDrawing\par}{\bkmkstart hmi:drawncontrol:tdrawing}{\bkmkend hmi:drawncontrol:tdrawing}{\xe{\v TDrawing}}{\pard\s7 1.8.1   Description\par}TDrawing or a descendant is used to draw a graphical image for a control at runtime and context sensitive (not necessarily static). Because such drawing is not dependent on a special graphical resolution (like raster graphic images), large images don't require large memory, and small images can be stretched without a loss of quality (resolution). \par{\pard\s7 1.8.2   Method overview\par}{\bkmkstart hmi:drawncontrol:tdrawing:methods}{\bkmkend hmi:drawncontrol:tdrawing:methods}\par\trowd\pard\intbl Page\cell\pard\intbl Method\cell\pard\intbl Description\cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawing:addelement\cell\pard\intbl AddElement\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawing:destroy\cell\pard\intbl Destroy\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawing:draw\cell\pard\intbl Draw\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawing:resize\cell\pard\intbl Resize\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawing:rotate\cell\pard\intbl Rotate\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawing:shift\cell\pard\intbl Shift\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawing:zoom\cell\pard\intbl Zoom\cell\pard\intbl \cell\row\par\par{\pard\s7 1.8.3   Property overview\par}{\bkmkstart hmi:drawncontrol:tdrawing:properties}{\bkmkend hmi:drawncontrol:tdrawing:properties}\par\trowd\pard\intbl Page\cell\pard\intbl Properties\cell\pard\intbl Access \cell\pard\intbl Description \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawing:elementcount\cell\pard\intbl ElementCount\cell\pard\intbl r \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawing:elementlist\cell\pard\intbl ElementList\cell\pard\intbl r \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawing:elements\cell\pard\intbl Elements\cell\pard\intbl r \cell\pard\intbl  \cell\row\par\par{\pard\s7 1.8.4   TDrawing.AddElement\par}{\bkmkstart hmi:drawncontrol:tdrawing:addelement}{\bkmkend hmi:drawncontrol:tdrawing:addelement}{\xe{\v TDrawing.AddElement}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 function AddElement(AElement: TElement) : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.8.5   TDrawing.Draw\par}{\bkmkstart hmi:drawncontrol:tdrawing:draw}{\bkmkend hmi:drawncontrol:tdrawing:draw}{\xe{\v TDrawing.Draw}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Draw;  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.8.6   TDrawing.Shift\par}{\bkmkstart hmi:drawncontrol:tdrawing:shift}{\bkmkend hmi:drawncontrol:tdrawing:shift}{\xe{\v TDrawing.Shift}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Shift(V: TPoint);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.8.7   TDrawing.Rotate\par}{\bkmkstart hmi:drawncontrol:tdrawing:rotate}{\bkmkend hmi:drawncontrol:tdrawing:rotate}{\xe{\v TDrawing.Rotate}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Rotate(CP: TPoint; Angle: Extended);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.8.8   TDrawing.Resize\par}{\bkmkstart hmi:drawncontrol:tdrawing:resize}{\bkmkend hmi:drawncontrol:tdrawing:resize}{\xe{\v TDrawing.Resize}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Resize;  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.8.9   TDrawing.Zoom\par}{\bkmkstart hmi:drawncontrol:tdrawing:zoom}{\bkmkend hmi:drawncontrol:tdrawing:zoom}{\xe{\v TDrawing.Zoom}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Zoom(CP: TPoint; Factor: Extended);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.8.10   TDrawing.Destroy\par}{\bkmkstart hmi:drawncontrol:tdrawing:destroy}{\bkmkend hmi:drawncontrol:tdrawing:destroy}{\xe{\v TDrawing.Destroy}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 destructor Destroy;  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+}\par{\pard\s7 1.8.11   TDrawing.ElementCount\par}{\bkmkstart hmi:drawncontrol:tdrawing:elementcount}{\bkmkend hmi:drawncontrol:tdrawing:elementcount}{\xe{\v TDrawing.ElementCount}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property ElementCount : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+\par\s9 Access\pard\par\s10\f2 Read
+}\par{\pard\s7 1.8.12   TDrawing.ElementList\par}{\bkmkstart hmi:drawncontrol:tdrawing:elementlist}{\bkmkend hmi:drawncontrol:tdrawing:elementlist}{\xe{\v TDrawing.ElementList}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property ElementList : TFpList
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+\par\s9 Access\pard\par\s10\f2 Read
+}\par{\pard\s7 1.8.13   TDrawing.Elements\par}{\bkmkstart hmi:drawncontrol:tdrawing:elements}{\bkmkend hmi:drawncontrol:tdrawing:elements}{\xe{\v TDrawing.Elements}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Elements[Index: Integer]: TElement
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+\par\s9 Access\pard\par\s10\f2 Read
+}\par{\pard\s6 1.9   TDrawnControl\par}{\bkmkstart hmi:drawncontrol:tdrawncontrol}{\bkmkend hmi:drawncontrol:tdrawncontrol}{\xe{\v TDrawnControl}}{\pard\s7 1.9.1   Description\par}control, that displays a drawn graphic on its surface\par{\pard\s7 1.9.2   Method overview\par}{\bkmkstart hmi:drawncontrol:tdrawncontrol:methods}{\bkmkend hmi:drawncontrol:tdrawncontrol:methods}\par\trowd\pard\intbl Page\cell\pard\intbl Method\cell\pard\intbl Description\cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawncontrol:getdrawing\cell\pard\intbl GetDrawing\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawncontrol:getdrawingclass\cell\pard\intbl GetDrawingClass\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawncontrol:paint\cell\pard\intbl Paint\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawncontrol:resize\cell\pard\intbl Resize\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawncontrol:setparent\cell\pard\intbl SetParent\cell\pard\intbl \cell\row\par\par{\pard\s7 1.9.3   Property overview\par}{\bkmkstart hmi:drawncontrol:tdrawncontrol:properties}{\bkmkend hmi:drawncontrol:tdrawncontrol:properties}\par\trowd\pard\intbl Page\cell\pard\intbl Properties\cell\pard\intbl Access \cell\pard\intbl Description \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tdrawncontrol:drawing\cell\pard\intbl Drawing\cell\pard\intbl r \cell\pard\intbl  \cell\row\par\par{\pard\s7 1.9.4   TDrawnControl.GetDrawing\par}{\bkmkstart hmi:drawncontrol:tdrawncontrol:getdrawing}{\bkmkend hmi:drawncontrol:tdrawncontrol:getdrawing}{\xe{\v TDrawnControl.GetDrawing}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 function GetDrawing : TDrawing
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.9.5   TDrawnControl.GetDrawingClass\par}{\bkmkstart hmi:drawncontrol:tdrawncontrol:getdrawingclass}{\bkmkend hmi:drawncontrol:tdrawncontrol:getdrawingclass}{\xe{\v TDrawnControl.GetDrawingClass}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 class function GetDrawingClass : TDrawingClass;  Virtual
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.9.6   TDrawnControl.Paint\par}{\bkmkstart hmi:drawncontrol:tdrawncontrol:paint}{\bkmkend hmi:drawncontrol:tdrawncontrol:paint}{\xe{\v TDrawnControl.Paint}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Paint;  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.9.7   TDrawnControl.Resize\par}{\bkmkstart hmi:drawncontrol:tdrawncontrol:resize}{\bkmkend hmi:drawncontrol:tdrawncontrol:resize}{\xe{\v TDrawnControl.Resize}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Resize;  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.9.8   TDrawnControl.SetParent\par}{\bkmkstart hmi:drawncontrol:tdrawncontrol:setparent}{\bkmkend hmi:drawncontrol:tdrawncontrol:setparent}{\xe{\v TDrawnControl.SetParent}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure SetParent(NewParent: TWinControl);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.9.9   TDrawnControl.Drawing\par}{\bkmkstart hmi:drawncontrol:tdrawncontrol:drawing}{\bkmkend hmi:drawncontrol:tdrawncontrol:drawing}{\xe{\v TDrawnControl.Drawing}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Drawing : TDrawing
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read
+}\par{\pard\s6 1.10   TElement\par}{\bkmkstart hmi:drawncontrol:telement}{\bkmkend hmi:drawncontrol:telement}{\xe{\v TElement}}{\pard\s7 1.10.1   Description\par}Objects of this class are usually placed on a TDrawing object. Because TElement is abstract, it is necessary to derive concrete element classes from it first. You can use the protected methods, especially class methods for vector handling, to design. The design has to happen by overriding the abstract and other virtual methods. \par\s9 See also\pard\par\s10\f2 #HMI.drawncontrol.TLine{\field{\*\fldinst{\lang1024 PAGEREF BMhmi:drawncontrol:tline \\*MERGEFORMAT }}{\\fldrslt{hmi:drawncontrol:tline}}},
+#HMI.drawncontrol.TRectangle{\field{\*\fldinst{\lang1024 PAGEREF BMhmi:drawncontrol:trectangle \\*MERGEFORMAT }}{\\fldrslt{hmi:drawncontrol:trectangle}}},
+#HMI.drawncontrol.TRotativePointer{\field{\*\fldinst{\lang1024 PAGEREF BMhmi:drawncontrol:trotativepointer \\*MERGEFORMAT }}{\\fldrslt{hmi:drawncontrol:trotativepointer}}}\par{\pard\s7 1.10.2   Method overview\par}{\bkmkstart hmi:drawncontrol:telement:methods}{\bkmkend hmi:drawncontrol:telement:methods}\par\trowd\pard\intbl Page\cell\pard\intbl Method\cell\pard\intbl Description\cell\row\par\trowd\pard\intbl hmi:drawncontrol:telement:destroy\cell\pard\intbl Destroy\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:telement:getvectordirection\cell\pard\intbl GetVectorDirection\cell\pard\intbl calculates the angle of a vector being given in screen coordinates. \cell\row\par\trowd\pard\intbl hmi:drawncontrol:telement:getvectorlength\cell\pard\intbl GetVectorLength\cell\pard\intbl calculates the absolute value (length) of the given vector\cell\row\par\trowd\pard\intbl hmi:drawncontrol:telement:notification\cell\pard\intbl Notification\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:telement:rotate\cell\pard\intbl Rotate\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:telement:setvectordirection\cell\pard\intbl SetVectorDirection\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:telement:setvectorlength\cell\pard\intbl SetVectorLength\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:telement:shift\cell\pard\intbl Shift\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:telement:vectorrotate\cell\pard\intbl VectorRotate\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:telement:vectorzoom\cell\pard\intbl VectorZoom\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:telement:zoom\cell\pard\intbl Zoom\cell\pard\intbl \cell\row\par\par{\pard\s7 1.10.3   Property overview\par}{\bkmkstart hmi:drawncontrol:telement:properties}{\bkmkend hmi:drawncontrol:telement:properties}\par\trowd\pard\intbl Page\cell\pard\intbl Properties\cell\pard\intbl Access \cell\pard\intbl Description \cell\row\par\trowd\pard\intbl hmi:drawncontrol:telement:brush\cell\pard\intbl Brush\cell\pard\intbl r \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:telement:control\cell\pard\intbl Control\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:telement:pen\cell\pard\intbl Pen\cell\pard\intbl r \cell\pard\intbl  \cell\row\par\par{\pard\s7 1.10.4   TElement.GetVectorDirection\par}{\bkmkstart hmi:drawncontrol:telement:getvectordirection}{\bkmkend hmi:drawncontrol:telement:getvectordirection}{\xe{\v TElement.GetVectorDirection}}{\pard\par\s9 Synopsis\pard\par\s10\f2 calculates the angle of a vector being given in screen coordinates. \par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 class function GetVectorDirection(V: TPoint) : Extended
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+\par\s9 Description\pard\par\s10\f2 The angle is calculated in Radiant (rad). 0 rad is the rirection of the x axis. }\par{\pard\s7 1.10.5   TElement.GetVectorLength\par}{\bkmkstart hmi:drawncontrol:telement:getvectorlength}{\bkmkend hmi:drawncontrol:telement:getvectorlength}{\xe{\v TElement.GetVectorLength}}{\pard\par\s9 Synopsis\pard\par\s10\f2 calculates the absolute value (length) of the given vector\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 class function GetVectorLength(V: TPoint) : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+\par\s9 Description\pard\par\s10\f2 The length is measured in screen units. It is expected, that the horizontal and the vertical resolution are equal. }\par{\pard\s7 1.10.6   TElement.SetVectorDirection\par}{\bkmkstart hmi:drawncontrol:telement:setvectordirection}{\bkmkend hmi:drawncontrol:telement:setvectordirection}{\xe{\v TElement.SetVectorDirection}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 class procedure SetVectorDirection(var V: TPoint; Angle: Extended)
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.10.7   TElement.SetVectorLength\par}{\bkmkstart hmi:drawncontrol:telement:setvectorlength}{\bkmkend hmi:drawncontrol:telement:setvectorlength}{\xe{\v TElement.SetVectorLength}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 class procedure SetVectorLength(var V: TPoint; Length: Extended)
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.10.8   TElement.VectorRotate\par}{\bkmkstart hmi:drawncontrol:telement:vectorrotate}{\bkmkend hmi:drawncontrol:telement:vectorrotate}{\xe{\v TElement.VectorRotate}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 class procedure VectorRotate(var Vec: TPoint; Angle: Extended)
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.10.9   TElement.VectorZoom\par}{\bkmkstart hmi:drawncontrol:telement:vectorzoom}{\bkmkend hmi:drawncontrol:telement:vectorzoom}{\xe{\v TElement.VectorZoom}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 class procedure VectorZoom(var Vec: TPoint; Factor: Extended)
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.10.10   TElement.Notification\par}{\bkmkstart hmi:drawncontrol:telement:notification}{\bkmkend hmi:drawncontrol:telement:notification}{\xe{\v TElement.Notification}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Notification(AComponent: TComponent; Operation: TOperation)
+                      ;  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.10.11   TElement.Shift\par}{\bkmkstart hmi:drawncontrol:telement:shift}{\bkmkend hmi:drawncontrol:telement:shift}{\xe{\v TElement.Shift}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Shift(V: TPoint);  Virtual;  Abstract
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.10.12   TElement.Rotate\par}{\bkmkstart hmi:drawncontrol:telement:rotate}{\bkmkend hmi:drawncontrol:telement:rotate}{\xe{\v TElement.Rotate}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Rotate(CP: TPoint; Angle: Extended);  Virtual;  Abstract
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.10.13   TElement.Zoom\par}{\bkmkstart hmi:drawncontrol:telement:zoom}{\bkmkend hmi:drawncontrol:telement:zoom}{\xe{\v TElement.Zoom}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Zoom(CP: TPoint; Factor: Extended);  Virtual;  Abstract
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.10.14   TElement.Destroy\par}{\bkmkstart hmi:drawncontrol:telement:destroy}{\bkmkend hmi:drawncontrol:telement:destroy}{\xe{\v TElement.Destroy}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 destructor Destroy;  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+}\par{\pard\s7 1.10.15   TElement.Brush\par}{\bkmkstart hmi:drawncontrol:telement:brush}{\bkmkend hmi:drawncontrol:telement:brush}{\xe{\v TElement.Brush}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Brush : TBrush
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read
+}\par{\pard\s7 1.10.16   TElement.Pen\par}{\bkmkstart hmi:drawncontrol:telement:pen}{\bkmkend hmi:drawncontrol:telement:pen}{\xe{\v TElement.Pen}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Pen : TPen
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read
+}\par{\pard\s7 1.10.17   TElement.Control\par}{\bkmkstart hmi:drawncontrol:telement:control}{\bkmkend hmi:drawncontrol:telement:control}{\xe{\v TElement.Control}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Control : TGraphicControl
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s6 1.11   TLine\par}{\bkmkstart hmi:drawncontrol:tline}{\bkmkend hmi:drawncontrol:tline}{\xe{\v TLine}}{\pard\s7 1.11.1   Description\par}straight line that starts at SP and ends at EP\par{\pard\s7 1.11.2   Method overview\par}{\bkmkstart hmi:drawncontrol:tline:methods}{\bkmkend hmi:drawncontrol:tline:methods}\par\trowd\pard\intbl Page\cell\pard\intbl Method\cell\pard\intbl Description\cell\row\par\trowd\pard\intbl hmi:drawncontrol:tline:draw\cell\pard\intbl Draw\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tline:rotate\cell\pard\intbl Rotate\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tline:shift\cell\pard\intbl Shift\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tline:zoom\cell\pard\intbl Zoom\cell\pard\intbl \cell\row\par\par{\pard\s7 1.11.3   Property overview\par}{\bkmkstart hmi:drawncontrol:tline:properties}{\bkmkend hmi:drawncontrol:tline:properties}\par\trowd\pard\intbl Page\cell\pard\intbl Properties\cell\pard\intbl Access \cell\pard\intbl Description \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tline:angle\cell\pard\intbl Angle\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tline:ep\cell\pard\intbl EP\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tline:length\cell\pard\intbl Length\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:tline:sp\cell\pard\intbl SP\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\par{\pard\s7 1.11.4   TLine.Shift\par}{\bkmkstart hmi:drawncontrol:tline:shift}{\bkmkend hmi:drawncontrol:tline:shift}{\xe{\v TLine.Shift}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Shift(V: TPoint);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.11.5   TLine.Rotate\par}{\bkmkstart hmi:drawncontrol:tline:rotate}{\bkmkend hmi:drawncontrol:tline:rotate}{\xe{\v TLine.Rotate}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Rotate(CP: TPoint; Angle: Extended);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.11.6   TLine.Zoom\par}{\bkmkstart hmi:drawncontrol:tline:zoom}{\bkmkend hmi:drawncontrol:tline:zoom}{\xe{\v TLine.Zoom}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Zoom(CP: TPoint; Factor: Extended);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.11.7   TLine.Draw\par}{\bkmkstart hmi:drawncontrol:tline:draw}{\bkmkend hmi:drawncontrol:tline:draw}{\xe{\v TLine.Draw}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Draw;  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.11.8   TLine.Angle\par}{\bkmkstart hmi:drawncontrol:tline:angle}{\bkmkend hmi:drawncontrol:tline:angle}{\xe{\v TLine.Angle}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Angle : Extended
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 1.11.9   TLine.Length\par}{\bkmkstart hmi:drawncontrol:tline:length}{\bkmkend hmi:drawncontrol:tline:length}{\xe{\v TLine.Length}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Length : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 1.11.10   TLine.SP\par}{\bkmkstart hmi:drawncontrol:tline:sp}{\bkmkend hmi:drawncontrol:tline:sp}{\xe{\v TLine.SP}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property SP : TPoint
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 1.11.11   TLine.EP\par}{\bkmkstart hmi:drawncontrol:tline:ep}{\bkmkend hmi:drawncontrol:tline:ep}{\xe{\v TLine.EP}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property EP : TPoint
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s6 1.12   TRectangle\par}{\bkmkstart hmi:drawncontrol:trectangle}{\bkmkend hmi:drawncontrol:trectangle}{\xe{\v TRectangle}}{\pard\s7 1.12.1   Description\par}TElement descendant to add a rectangle to a drawing\par{\pard\s7 1.12.2   Method overview\par}{\bkmkstart hmi:drawncontrol:trectangle:methods}{\bkmkend hmi:drawncontrol:trectangle:methods}\par\trowd\pard\intbl Page\cell\pard\intbl Method\cell\pard\intbl Description\cell\row\par\trowd\pard\intbl hmi:drawncontrol:trectangle:draw\cell\pard\intbl Draw\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:trectangle:rotate\cell\pard\intbl Rotate\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:trectangle:shift\cell\pard\intbl Shift\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:trectangle:zoom\cell\pard\intbl Zoom\cell\pard\intbl \cell\row\par\par{\pard\s7 1.12.3   Property overview\par}{\bkmkstart hmi:drawncontrol:trectangle:properties}{\bkmkend hmi:drawncontrol:trectangle:properties}\par\trowd\pard\intbl Page\cell\pard\intbl Properties\cell\pard\intbl Access \cell\pard\intbl Description \cell\row\par\trowd\pard\intbl hmi:drawncontrol:trectangle:height\cell\pard\intbl Height\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:trectangle:left\cell\pard\intbl Left\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:trectangle:top\cell\pard\intbl Top\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:trectangle:width\cell\pard\intbl Width\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\par{\pard\s7 1.12.4   TRectangle.Draw\par}{\bkmkstart hmi:drawncontrol:trectangle:draw}{\bkmkend hmi:drawncontrol:trectangle:draw}{\xe{\v TRectangle.Draw}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Draw;  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.12.5   TRectangle.Rotate\par}{\bkmkstart hmi:drawncontrol:trectangle:rotate}{\bkmkend hmi:drawncontrol:trectangle:rotate}{\xe{\v TRectangle.Rotate}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Rotate(CP: TPoint; Angle: Extended);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.12.6   TRectangle.Shift\par}{\bkmkstart hmi:drawncontrol:trectangle:shift}{\bkmkend hmi:drawncontrol:trectangle:shift}{\xe{\v TRectangle.Shift}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Shift(V: TPoint);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.12.7   TRectangle.Zoom\par}{\bkmkstart hmi:drawncontrol:trectangle:zoom}{\bkmkend hmi:drawncontrol:trectangle:zoom}{\xe{\v TRectangle.Zoom}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Zoom(CP: TPoint; Factor: Extended);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.12.8   TRectangle.Height\par}{\bkmkstart hmi:drawncontrol:trectangle:height}{\bkmkend hmi:drawncontrol:trectangle:height}{\xe{\v TRectangle.Height}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Height : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 published
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 1.12.9   TRectangle.Left\par}{\bkmkstart hmi:drawncontrol:trectangle:left}{\bkmkend hmi:drawncontrol:trectangle:left}{\xe{\v TRectangle.Left}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Left : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 published
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 1.12.10   TRectangle.Top\par}{\bkmkstart hmi:drawncontrol:trectangle:top}{\bkmkend hmi:drawncontrol:trectangle:top}{\xe{\v TRectangle.Top}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Top : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 published
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 1.12.11   TRectangle.Width\par}{\bkmkstart hmi:drawncontrol:trectangle:width}{\bkmkend hmi:drawncontrol:trectangle:width}{\xe{\v TRectangle.Width}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Width : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 published
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s6 1.13   TRotativePointer\par}{\bkmkstart hmi:drawncontrol:trotativepointer}{\bkmkend hmi:drawncontrol:trotativepointer}{\xe{\v TRotativePointer}}{\pard\s7 1.13.1   Description\par}pointer rotating around the point CP by changing the value of Angle\par{\pard\s7 1.13.2   Method overview\par}{\bkmkstart hmi:drawncontrol:trotativepointer:methods}{\bkmkend hmi:drawncontrol:trotativepointer:methods}\par\trowd\pard\intbl Page\cell\pard\intbl Method\cell\pard\intbl Description\cell\row\par\trowd\pard\intbl hmi:drawncontrol:trotativepointer:rotate\cell\pard\intbl Rotate\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:trotativepointer:shift\cell\pard\intbl Shift\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:drawncontrol:trotativepointer:zoom\cell\pard\intbl Zoom\cell\pard\intbl \cell\row\par\par{\pard\s7 1.13.3   Property overview\par}{\bkmkstart hmi:drawncontrol:trotativepointer:properties}{\bkmkend hmi:drawncontrol:trotativepointer:properties}\par\trowd\pard\intbl Page\cell\pard\intbl Properties\cell\pard\intbl Access \cell\pard\intbl Description \cell\row\par\trowd\pard\intbl hmi:drawncontrol:trotativepointer:angle\cell\pard\intbl Angle\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:trotativepointer:center\cell\pard\intbl Center\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:trotativepointer:offset\cell\pard\intbl Offset\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:drawncontrol:trotativepointer:radius\cell\pard\intbl Radius\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\par{\pard\s7 1.13.4   TRotativePointer.Rotate\par}{\bkmkstart hmi:drawncontrol:trotativepointer:rotate}{\bkmkend hmi:drawncontrol:trotativepointer:rotate}{\xe{\v TRotativePointer.Rotate}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Rotate(CP: TPoint; Angle: Extended);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.13.5   TRotativePointer.Shift\par}{\bkmkstart hmi:drawncontrol:trotativepointer:shift}{\bkmkend hmi:drawncontrol:trotativepointer:shift}{\xe{\v TRotativePointer.Shift}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Shift(V: TPoint);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.13.6   TRotativePointer.Zoom\par}{\bkmkstart hmi:drawncontrol:trotativepointer:zoom}{\bkmkend hmi:drawncontrol:trotativepointer:zoom}{\xe{\v TRotativePointer.Zoom}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Zoom(CP: TPoint; Factor: Extended);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 1.13.7   TRotativePointer.Center\par}{\bkmkstart hmi:drawncontrol:trotativepointer:center}{\bkmkend hmi:drawncontrol:trotativepointer:center}{\xe{\v TRotativePointer.Center}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Center : TPoint
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 1.13.8   TRotativePointer.Angle\par}{\bkmkstart hmi:drawncontrol:trotativepointer:angle}{\bkmkend hmi:drawncontrol:trotativepointer:angle}{\xe{\v TRotativePointer.Angle}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Angle : Extended
+}
+\par\s9 Visibility\pard\par\s10\f2 published
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 1.13.9   TRotativePointer.Offset\par}{\bkmkstart hmi:drawncontrol:trotativepointer:offset}{\bkmkend hmi:drawncontrol:trotativepointer:offset}{\xe{\v TRotativePointer.Offset}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Offset : Extended
+}
+\par\s9 Visibility\pard\par\s10\f2 published
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 1.13.10   TRotativePointer.Radius\par}{\bkmkstart hmi:drawncontrol:trotativepointer:radius}{\bkmkend hmi:drawncontrol:trotativepointer:radius}{\xe{\v TRotativePointer.Radius}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Radius : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 published
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par\page{\pard\s5 2   Reference for unit 'HMI'\par}{\bkmkstart hmi:hmi}{\bkmkend hmi:hmi}{\pard\s6 2.1   Used units\par}\pard\qc\s3 Used units by unit 'HMI'\par\trowd\pard\intbl Name\cell\pard\intbl Page\cell\row\par\trowd\pard\intbl DrawnControl\cell\pard\intbl Pageref to hmi:drawncontrol\cell\row\par\trowd\pard\intbl LazarusPackageIntf\cell\pard\intbl Pageref to hmi:hmi:lazaruspackageintf\cell\row\par\trowd\pard\intbl RetroClock\cell\pard\intbl Pageref to hmi:retroclock\cell\row\par\trowd\pard\intbl System\cell\pard\intbl Pageref to hmi:hmi:system\cell\row\par\par\page{\pard\s5 3   Reference for unit 'RetroClock'\par}{\bkmkstart hmi:retroclock}{\bkmkend hmi:retroclock}{\pard\s6 3.1   Used units\par}\pard\qc\s3 Used units by unit 'RetroClock'\par\trowd\pard\intbl Name\cell\pard\intbl Page\cell\row\par\trowd\pard\intbl Classes\cell\pard\intbl Pageref to hmi:retroclock:classes\cell\row\par\trowd\pard\intbl Controls\cell\pard\intbl Pageref to hmi:retroclock:controls\cell\row\par\trowd\pard\intbl Dialogs\cell\pard\intbl Pageref to hmi:retroclock:dialogs\cell\row\par\trowd\pard\intbl DrawnControl\cell\pard\intbl Pageref to hmi:drawncontrol\cell\row\par\trowd\pard\intbl Forms\cell\pard\intbl Pageref to hmi:retroclock:forms\cell\row\par\trowd\pard\intbl Graphics\cell\pard\intbl Pageref to hmi:retroclock:graphics\cell\row\par\trowd\pard\intbl LResources\cell\pard\intbl Pageref to hmi:retroclock:lresources\cell\row\par\trowd\pard\intbl System\cell\pard\intbl Pageref to hmi:retroclock:system\cell\row\par\trowd\pard\intbl SysUtils\cell\pard\intbl Pageref to hmi:retroclock:sysutils\cell\row\par\par{\pard\s6 3.2   Constants, types and variables\par}{\bkmkstart retroclockconststypesvars}{\bkmkend retroclockconststypesvars}{\pard\s7 3.2.1   Types\par}{\bkmkstart retroclocktypes}{\bkmkend retroclocktypes}\par{\pard\s4 TClockScaleLineIndex = 0..59
+}
+{\bkmkstart hmi:retroclock:tclockscalelineindex}{\bkmkend hmi:retroclock:tclockscalelineindex}{\xe{\v TClockScaleLineIndex}}\par \par{\pard\s6 3.3   Procedures and functions\par}{\bkmkstart retroclockfunctions}{\bkmkend retroclockfunctions}{\pard\s7 3.3.1   Register\par}{\bkmkstart hmi:retroclock:register}{\bkmkend hmi:retroclock:register}{\xe{\v Register}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Register
+}
+\par\s9 Visibility\pard\par\s10\f2 default
+}\par{\pard\s6 3.4   TClock\par}{\bkmkstart hmi:retroclock:tclock}{\bkmkend hmi:retroclock:tclock}{\xe{\v TClock}}{\pard\s7 3.4.1   Method overview\par}{\bkmkstart hmi:retroclock:tclock:methods}{\bkmkend hmi:retroclock:tclock:methods}\par\trowd\pard\intbl Page\cell\pard\intbl Method\cell\pard\intbl Description\cell\row\par\trowd\pard\intbl hmi:retroclock:tclock:create\cell\pard\intbl Create\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:retroclock:tclock:draw\cell\pard\intbl Draw\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:retroclock:tclock:resize\cell\pard\intbl Resize\cell\pard\intbl \cell\row\par\par{\pard\s7 3.4.2   Property overview\par}{\bkmkstart hmi:retroclock:tclock:properties}{\bkmkend hmi:retroclock:tclock:properties}\par\trowd\pard\intbl Page\cell\pard\intbl Properties\cell\pard\intbl Access \cell\pard\intbl Description \cell\row\par\trowd\pard\intbl hmi:retroclock:tclock:center\cell\pard\intbl Center\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:retroclock:tclock:diameter\cell\pard\intbl Diameter\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:retroclock:tclock:frame\cell\pard\intbl Frame\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:retroclock:tclock:hourptr\cell\pard\intbl HourPtr\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:retroclock:tclock:minptr\cell\pard\intbl MinPtr\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:retroclock:tclock:radius\cell\pard\intbl Radius\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:retroclock:tclock:scale\cell\pard\intbl Scale\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:retroclock:tclock:secptr\cell\pard\intbl SecPtr\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:retroclock:tclock:time\cell\pard\intbl Time\cell\pard\intbl r \cell\pard\intbl  \cell\row\par\par{\pard\s7 3.4.3   TClock.Draw\par}{\bkmkstart hmi:retroclock:tclock:draw}{\bkmkend hmi:retroclock:tclock:draw}{\xe{\v TClock.Draw}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Draw;  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 3.4.4   TClock.Resize\par}{\bkmkstart hmi:retroclock:tclock:resize}{\bkmkend hmi:retroclock:tclock:resize}{\xe{\v TClock.Resize}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Resize;  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 3.4.5   TClock.Create\par}{\bkmkstart hmi:retroclock:tclock:create}{\bkmkend hmi:retroclock:tclock:create}{\xe{\v TClock.Create}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 constructor Create(AOwner: TComponent);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+}\par{\pard\s7 3.4.6   TClock.Center\par}{\bkmkstart hmi:retroclock:tclock:center}{\bkmkend hmi:retroclock:tclock:center}{\xe{\v TClock.Center}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Center : TPoint
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 3.4.7   TClock.Frame\par}{\bkmkstart hmi:retroclock:tclock:frame}{\bkmkend hmi:retroclock:tclock:frame}{\xe{\v TClock.Frame}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Frame : TRectangle
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 3.4.8   TClock.Scale\par}{\bkmkstart hmi:retroclock:tclock:scale}{\bkmkend hmi:retroclock:tclock:scale}{\xe{\v TClock.Scale}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Scale : TClockScale
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 3.4.9   TClock.HourPtr\par}{\bkmkstart hmi:retroclock:tclock:hourptr}{\bkmkend hmi:retroclock:tclock:hourptr}{\xe{\v TClock.HourPtr}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property HourPtr : TRotativePointer
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 3.4.10   TClock.MinPtr\par}{\bkmkstart hmi:retroclock:tclock:minptr}{\bkmkend hmi:retroclock:tclock:minptr}{\xe{\v TClock.MinPtr}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property MinPtr : TRotativePointer
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 3.4.11   TClock.SecPtr\par}{\bkmkstart hmi:retroclock:tclock:secptr}{\bkmkend hmi:retroclock:tclock:secptr}{\xe{\v TClock.SecPtr}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property SecPtr : TRotativePointer
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 3.4.12   TClock.Time\par}{\bkmkstart hmi:retroclock:tclock:time}{\bkmkend hmi:retroclock:tclock:time}{\xe{\v TClock.Time}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Time : TDateTime
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read
+}\par{\pard\s7 3.4.13   TClock.Diameter\par}{\bkmkstart hmi:retroclock:tclock:diameter}{\bkmkend hmi:retroclock:tclock:diameter}{\xe{\v TClock.Diameter}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Diameter : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 published
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 3.4.14   TClock.Radius\par}{\bkmkstart hmi:retroclock:tclock:radius}{\bkmkend hmi:retroclock:tclock:radius}{\xe{\v TClock.Radius}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Radius : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 published
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s6 3.5   TClockScale\par}{\bkmkstart hmi:retroclock:tclockscale}{\bkmkend hmi:retroclock:tclockscale}{\xe{\v TClockScale}}{\pard\s7 3.5.1   Method overview\par}{\bkmkstart hmi:retroclock:tclockscale:methods}{\bkmkend hmi:retroclock:tclockscale:methods}\par\trowd\pard\intbl Page\cell\pard\intbl Method\cell\pard\intbl Description\cell\row\par\trowd\pard\intbl hmi:retroclock:tclockscale:create\cell\pard\intbl Create\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:retroclock:tclockscale:resize\cell\pard\intbl Resize\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:retroclock:tclockscale:shift\cell\pard\intbl Shift\cell\pard\intbl \cell\row\par\par{\pard\s7 3.5.2   Property overview\par}{\bkmkstart hmi:retroclock:tclockscale:properties}{\bkmkend hmi:retroclock:tclockscale:properties}\par\trowd\pard\intbl Page\cell\pard\intbl Properties\cell\pard\intbl Access \cell\pard\intbl Description \cell\row\par\trowd\pard\intbl hmi:retroclock:tclockscale:center\cell\pard\intbl Center\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:retroclock:tclockscale:radius\cell\pard\intbl Radius\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\par{\pard\s7 3.5.3   TClockScale.Resize\par}{\bkmkstart hmi:retroclock:tclockscale:resize}{\bkmkend hmi:retroclock:tclockscale:resize}{\xe{\v TClockScale.Resize}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Resize;  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 3.5.4   TClockScale.Shift\par}{\bkmkstart hmi:retroclock:tclockscale:shift}{\bkmkend hmi:retroclock:tclockscale:shift}{\xe{\v TClockScale.Shift}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Shift(V: TPoint);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 3.5.5   TClockScale.Create\par}{\bkmkstart hmi:retroclock:tclockscale:create}{\bkmkend hmi:retroclock:tclockscale:create}{\xe{\v TClockScale.Create}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 constructor Create(AOwner: TComponent);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+}\par{\pard\s7 3.5.6   TClockScale.Center\par}{\bkmkstart hmi:retroclock:tclockscale:center}{\bkmkend hmi:retroclock:tclockscale:center}{\xe{\v TClockScale.Center}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Center : TPoint
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 3.5.7   TClockScale.Radius\par}{\bkmkstart hmi:retroclock:tclockscale:radius}{\bkmkend hmi:retroclock:tclockscale:radius}{\xe{\v TClockScale.Radius}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Radius : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s6 3.6   TClockScaleLines\par}{\bkmkstart hmi:retroclock:tclockscalelines}{\bkmkend hmi:retroclock:tclockscalelines}{\xe{\v TClockScaleLines}}{\pard\s7 3.6.1   Method overview\par}{\bkmkstart hmi:retroclock:tclockscalelines:methods}{\bkmkend hmi:retroclock:tclockscalelines:methods}\par\trowd\pard\intbl Page\cell\pard\intbl Method\cell\pard\intbl Description\cell\row\par\trowd\pard\intbl hmi:retroclock:tclockscalelines:create\cell\pard\intbl Create\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:retroclock:tclockscalelines:resize\cell\pard\intbl Resize\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:retroclock:tclockscalelines:zoom\cell\pard\intbl Zoom\cell\pard\intbl \cell\row\par\par{\pard\s7 3.6.2   Property overview\par}{\bkmkstart hmi:retroclock:tclockscalelines:properties}{\bkmkend hmi:retroclock:tclockscalelines:properties}\par\trowd\pard\intbl Page\cell\pard\intbl Properties\cell\pard\intbl Access \cell\pard\intbl Description \cell\row\par\trowd\pard\intbl hmi:retroclock:tclockscalelines:baselinelength\cell\pard\intbl BaseLineLength\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:retroclock:tclockscalelines:center\cell\pard\intbl Center\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:retroclock:tclockscalelines:lines\cell\pard\intbl Lines\cell\pard\intbl r \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:retroclock:tclockscalelines:radius\cell\pard\intbl Radius\cell\pard\intbl rw \cell\pard\intbl  \cell\row\par\par{\pard\s7 3.6.3   TClockScaleLines.Resize\par}{\bkmkstart hmi:retroclock:tclockscalelines:resize}{\bkmkend hmi:retroclock:tclockscalelines:resize}{\xe{\v TClockScaleLines.Resize}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Resize;  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 3.6.4   TClockScaleLines.Zoom\par}{\bkmkstart hmi:retroclock:tclockscalelines:zoom}{\bkmkend hmi:retroclock:tclockscalelines:zoom}{\xe{\v TClockScaleLines.Zoom}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 procedure Zoom(CP: TPoint; Factor: Extended);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 3.6.5   TClockScaleLines.Create\par}{\bkmkstart hmi:retroclock:tclockscalelines:create}{\bkmkend hmi:retroclock:tclockscalelines:create}{\xe{\v TClockScaleLines.Create}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 constructor Create(AOwner: TComponent);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+}\par{\pard\s7 3.6.6   TClockScaleLines.Center\par}{\bkmkstart hmi:retroclock:tclockscalelines:center}{\bkmkend hmi:retroclock:tclockscalelines:center}{\xe{\v TClockScaleLines.Center}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Center : TPoint
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 3.6.7   TClockScaleLines.Lines\par}{\bkmkstart hmi:retroclock:tclockscalelines:lines}{\bkmkend hmi:retroclock:tclockscalelines:lines}{\xe{\v TClockScaleLines.Lines}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Lines[Index: TClockScaleLineIndex]: TLine
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read
+}\par{\pard\s7 3.6.8   TClockScaleLines.Radius\par}{\bkmkstart hmi:retroclock:tclockscalelines:radius}{\bkmkend hmi:retroclock:tclockscalelines:radius}{\xe{\v TClockScaleLines.Radius}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Radius : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s7 3.6.9   TClockScaleLines.BaseLineLength\par}{\bkmkstart hmi:retroclock:tclockscalelines:baselinelength}{\bkmkend hmi:retroclock:tclockscalelines:baselinelength}{\xe{\v TClockScaleLines.BaseLineLength}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property BaseLineLength : Integer
+}
+\par\s9 Visibility\pard\par\s10\f2 published
+\par\s9 Access\pard\par\s10\f2 Read,Write
+}\par{\pard\s6 3.7   TRetroClock\par}{\bkmkstart hmi:retroclock:tretroclock}{\bkmkend hmi:retroclock:tretroclock}{\xe{\v TRetroClock}}{\pard\s7 3.7.1   Method overview\par}{\bkmkstart hmi:retroclock:tretroclock:methods}{\bkmkend hmi:retroclock:tretroclock:methods}\par\trowd\pard\intbl Page\cell\pard\intbl Method\cell\pard\intbl Description\cell\row\par\trowd\pard\intbl hmi:retroclock:tretroclock:create\cell\pard\intbl Create\cell\pard\intbl \cell\row\par\trowd\pard\intbl hmi:retroclock:tretroclock:getdrawingclass\cell\pard\intbl GetDrawingClass\cell\pard\intbl \cell\row\par\par{\pard\s7 3.7.2   Property overview\par}{\bkmkstart hmi:retroclock:tretroclock:properties}{\bkmkend hmi:retroclock:tretroclock:properties}\par\trowd\pard\intbl Page\cell\pard\intbl Properties\cell\pard\intbl Access \cell\pard\intbl Description \cell\row\par\trowd\pard\intbl hmi:retroclock:tretroclock:align\cell\pard\intbl Align\cell\pard\intbl  \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:retroclock:tretroclock:anchors\cell\pard\intbl Anchors\cell\pard\intbl  \cell\pard\intbl  \cell\row\par\trowd\pard\intbl hmi:retroclock:tretroclock:clock\cell\pard\intbl Clock\cell\pard\intbl r \cell\pard\intbl  \cell\row\par\par{\pard\s7 3.7.3   TRetroClock.GetDrawingClass\par}{\bkmkstart hmi:retroclock:tretroclock:getdrawingclass}{\bkmkend hmi:retroclock:tretroclock:getdrawingclass}{\xe{\v TRetroClock.GetDrawingClass}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 class function GetDrawingClass : TDrawingClass;  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 protected
+}\par{\pard\s7 3.7.4   TRetroClock.Create\par}{\bkmkstart hmi:retroclock:tretroclock:create}{\bkmkend hmi:retroclock:tretroclock:create}{\xe{\v TRetroClock.Create}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 constructor Create(AOwner: TComponent);  Override
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+}\par{\pard\s7 3.7.5   TRetroClock.Clock\par}{\bkmkstart hmi:retroclock:tretroclock:clock}{\bkmkend hmi:retroclock:tretroclock:clock}{\xe{\v TRetroClock.Clock}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Clock : TClock
+}
+\par\s9 Visibility\pard\par\s10\f2 public
+\par\s9 Access\pard\par\s10\f2 Read
+}\par{\pard\s7 3.7.6   TRetroClock.Align\par}{\bkmkstart hmi:retroclock:tretroclock:align}{\bkmkend hmi:retroclock:tretroclock:align}{\xe{\v TRetroClock.Align}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Align : 
+}
+\par\s9 Visibility\pard\par\s10\f2 published
+\par\s9 Access\pard\par\s10\f2 
+}\par{\pard\s7 3.7.7   TRetroClock.Anchors\par}{\bkmkstart hmi:retroclock:tretroclock:anchors}{\bkmkend hmi:retroclock:tretroclock:anchors}{\xe{\v TRetroClock.Anchors}}{\pard\par\s9 Declaration\pard\par\s10\f1 \par{\pard\s4 Property Anchors : 
+}
+\par\s9 Visibility\pard\par\s10\f2 published
+\par\s9 Access\pard\par\s10\f2 
+}}

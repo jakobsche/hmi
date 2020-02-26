@@ -1,0 +1,58 @@
+.TH "DrawnControl" "3" "February 2020" "hmi" ""
+
+.SH NAME
+DrawnControl \- declaring a TGraphicControl descendant with a Drawing on its Canvas
+
+.SH DESCRIPTION
+The unit implements a TGraphicControl class that can display a drawing on its canvas. The interface provides methods to override, if the drawing is not static, for example, that can change, if the size or position of the control or the time change. 
+
+.SH USED UNITS
+.TP
+.B System
+.TP
+.B Classes
+.TP
+.B SysUtils
+.TP
+.B LResources
+.TP
+.B Forms
+.TP
+.B Controls
+.TP
+.B Graphics
+.TP
+.B Dialogs
+
+.SH CLASSES
+.TP
+.B IDrawnControl
+.TP
+.B TCircle
+TElement descendant to add a circle to a TDrawing object
+.TP
+.B TDrawing
+drawing class, usually containing objects of TElement descendants, that is drawn on a control's canvas
+.TP
+.B TDrawnControl
+control, that displays a drawn graphic on its surface
+.TP
+.B TElement
+base class for elements, that can be added to a TDrawing object
+.TP
+.B TLine
+straight line that starts at SP and ends at EP
+.TP
+.B TRectangle
+TElement descendant to add a rectangle to a drawing
+.TP
+.B TRotativePointer
+pointer rotating around the point CP by changing the value of Angle
+
+.SH PROCEDURES AND FUNCTIONS
+.TP
+.B Register
+
+.SH SEE ALSO
+drawncontrol (3),
+drawncontrol.types (3)

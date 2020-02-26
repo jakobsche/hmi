@@ -1,0 +1,1632 @@
+% This file has been created automatically by FPDoc.
+% Linear output (c) 2005 Michael Van Canneyt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Reference for unit 'DrawnControl'
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Reference for unit 'DrawnControl'}
+\label{hmi:drawncontrol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Used units
+\section{Used units}
+\begin{FPCltable}{lr}{Used units by unit 'DrawnControl'}{DrawnControl:0units}
+Name & Page \\ \hline
+Classes\index{unit!Classes} & \pageref{hmi:drawncontrol:classes} \\
+Controls\index{unit!Controls} & \pageref{hmi:drawncontrol:controls} \\
+Dialogs\index{unit!Dialogs} & \pageref{hmi:drawncontrol:dialogs} \\
+Forms\index{unit!Forms} & \pageref{hmi:drawncontrol:forms} \\
+Graphics\index{unit!Graphics} & \pageref{hmi:drawncontrol:graphics} \\
+LResources\index{unit!LResources} & \pageref{hmi:drawncontrol:lresources} \\
+System\index{unit!System} & \pageref{hmi:drawncontrol:system} \\
+SysUtils\index{unit!SysUtils} & \pageref{hmi:drawncontrol:sysutils} \\
+\end{FPCltable}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Overview
+\section{Overview}
+The unit implements a TGraphicControl class that can display a drawing on its canvas. The interface provides methods to override, if the drawing is not static, for example, that can change, if the size or position of the control or the time change. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+\section{}
+\label{hmi:drawncontrol:tdrawing topic 1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Constants, types and variables
+\section{Constants, types and variables}
+\label{drawncontrolconststypesvars}
+% Types
+\subsection{Types}
+\label{drawncontroltypes}
+
+\begin{verbatim}
+TDrawingClass = Class of TDrawing
+\end{verbatim}
+\label{hmi:drawncontrol:tdrawingclass}
+\index{TDrawingClass}
+The class method \#HMI.drawncontrol.TDrawnControl.GetDrawingClass (\pageref{hmi:drawncontrol:tdrawncontrol:getdrawingclass}) uses this to say, for which drawing class the control is made. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Procedures and functions
+\section{Procedures and functions}
+\label{drawncontrolfunctions}
+% Register
+\subsection{Register}
+\label{hmi:drawncontrol:register}
+\index{Register}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Register
+\end{verbatim}
+\Visibility
+default
+\end{FPCList}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IDrawnControl
+\section{IDrawnControl}
+\label{hmi:drawncontrol:idrawncontrol}
+\index{IDrawnControl}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TCircle
+\section{TCircle}
+\label{hmi:drawncontrol:tcircle}
+\index{TCircle}
+% Description
+\subsection{Description}
+TElement descendant to add a circle to a TDrawing object% Property overview
+\subsection{Property overview}
+\label{hmi:drawncontrol:tcircle:properties}
+\begin{tabularx}{\textwidth}{lllX}
+Page & Properties & Access & Description \\ \hline
+\pageref{hmi:drawncontrol:tcircle:center} & Center & rw &  \\
+\pageref{hmi:drawncontrol:tcircle:diameter} & Diameter & rw &  \\
+\pageref{hmi:drawncontrol:tcircle:radius} & Radius & rw &  \\
+\hline
+\end{tabularx}
+% TCircle.Center
+\subsection{TCircle.Center}
+\label{hmi:drawncontrol:tcircle:center}
+\index{TCircle.Center}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Center : TPoint
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TCircle.Diameter
+\subsection{TCircle.Diameter}
+\label{hmi:drawncontrol:tcircle:diameter}
+\index{TCircle.Diameter}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Diameter : Integer
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TCircle.Radius
+\subsection{TCircle.Radius}
+\label{hmi:drawncontrol:tcircle:radius}
+\index{TCircle.Radius}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Radius : Integer
+\end{verbatim}
+\Visibility
+published
+\Access
+Read,Write
+\end{FPCList}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TDrawing
+\section{TDrawing}
+\label{hmi:drawncontrol:tdrawing}
+\index{TDrawing}
+% Description
+\subsection{Description}
+TDrawing or a descendant is used to draw a graphical image for a control at runtime and context sensitive (not necessarily static). Because such drawing is not dependent on a special graphical resolution (like raster graphic images), large images don't require large memory, and small images can be stretched without a loss of quality (resolution). % Method overview
+\subsection{Method overview}
+\label{hmi:drawncontrol:tdrawing:methods}
+\begin{tabularx}{\textwidth}{llX}
+Page & Method & Description  \\ \hline
+\pageref{hmi:drawncontrol:tdrawing:addelement} & AddElement  &  \\
+\pageref{hmi:drawncontrol:tdrawing:destroy} & Destroy  &  \\
+\pageref{hmi:drawncontrol:tdrawing:draw} & Draw  &  \\
+\pageref{hmi:drawncontrol:tdrawing:resize} & Resize  &  \\
+\pageref{hmi:drawncontrol:tdrawing:rotate} & Rotate  &  \\
+\pageref{hmi:drawncontrol:tdrawing:shift} & Shift  &  \\
+\pageref{hmi:drawncontrol:tdrawing:zoom} & Zoom  &  \\
+\hline
+\end{tabularx}
+% Property overview
+\subsection{Property overview}
+\label{hmi:drawncontrol:tdrawing:properties}
+\begin{tabularx}{\textwidth}{lllX}
+Page & Properties & Access & Description \\ \hline
+\pageref{hmi:drawncontrol:tdrawing:elementcount} & ElementCount & r &  \\
+\pageref{hmi:drawncontrol:tdrawing:elementlist} & ElementList & r &  \\
+\pageref{hmi:drawncontrol:tdrawing:elements} & Elements & r &  \\
+\hline
+\end{tabularx}
+% TDrawing.AddElement
+\subsection{TDrawing.AddElement}
+\label{hmi:drawncontrol:tdrawing:addelement}
+\index{TDrawing.AddElement}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+function AddElement(AElement: TElement) : Integer
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TDrawing.Draw
+\subsection{TDrawing.Draw}
+\label{hmi:drawncontrol:tdrawing:draw}
+\index{TDrawing.Draw}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Draw;  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TDrawing.Shift
+\subsection{TDrawing.Shift}
+\label{hmi:drawncontrol:tdrawing:shift}
+\index{TDrawing.Shift}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Shift(V: TPoint);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TDrawing.Rotate
+\subsection{TDrawing.Rotate}
+\label{hmi:drawncontrol:tdrawing:rotate}
+\index{TDrawing.Rotate}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Rotate(CP: TPoint; Angle: Extended);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TDrawing.Resize
+\subsection{TDrawing.Resize}
+\label{hmi:drawncontrol:tdrawing:resize}
+\index{TDrawing.Resize}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Resize;  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TDrawing.Zoom
+\subsection{TDrawing.Zoom}
+\label{hmi:drawncontrol:tdrawing:zoom}
+\index{TDrawing.Zoom}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Zoom(CP: TPoint; Factor: Extended);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TDrawing.Destroy
+\subsection{TDrawing.Destroy}
+\label{hmi:drawncontrol:tdrawing:destroy}
+\index{TDrawing.Destroy}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+destructor Destroy;  Override
+\end{verbatim}
+\Visibility
+public
+\end{FPCList}
+% TDrawing.ElementCount
+\subsection{TDrawing.ElementCount}
+\label{hmi:drawncontrol:tdrawing:elementcount}
+\index{TDrawing.ElementCount}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property ElementCount : Integer
+\end{verbatim}
+\Visibility
+protected
+\Access
+Read
+\end{FPCList}
+% TDrawing.ElementList
+\subsection{TDrawing.ElementList}
+\label{hmi:drawncontrol:tdrawing:elementlist}
+\index{TDrawing.ElementList}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property ElementList : TFpList
+\end{verbatim}
+\Visibility
+protected
+\Access
+Read
+\end{FPCList}
+% TDrawing.Elements
+\subsection{TDrawing.Elements}
+\label{hmi:drawncontrol:tdrawing:elements}
+\index{TDrawing.Elements}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Elements[Index: Integer]: TElement
+\end{verbatim}
+\Visibility
+protected
+\Access
+Read
+\end{FPCList}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TDrawnControl
+\section{TDrawnControl}
+\label{hmi:drawncontrol:tdrawncontrol}
+\index{TDrawnControl}
+% Description
+\subsection{Description}
+control, that displays a drawn graphic on its surface% Method overview
+\subsection{Method overview}
+\label{hmi:drawncontrol:tdrawncontrol:methods}
+\begin{tabularx}{\textwidth}{llX}
+Page & Method & Description  \\ \hline
+\pageref{hmi:drawncontrol:tdrawncontrol:getdrawing} & GetDrawing  &  \\
+\pageref{hmi:drawncontrol:tdrawncontrol:getdrawingclass} & GetDrawingClass  &  \\
+\pageref{hmi:drawncontrol:tdrawncontrol:paint} & Paint  &  \\
+\pageref{hmi:drawncontrol:tdrawncontrol:resize} & Resize  &  \\
+\pageref{hmi:drawncontrol:tdrawncontrol:setparent} & SetParent  &  \\
+\hline
+\end{tabularx}
+% Property overview
+\subsection{Property overview}
+\label{hmi:drawncontrol:tdrawncontrol:properties}
+\begin{tabularx}{\textwidth}{lllX}
+Page & Properties & Access & Description \\ \hline
+\pageref{hmi:drawncontrol:tdrawncontrol:drawing} & Drawing & r &  \\
+\hline
+\end{tabularx}
+% TDrawnControl.GetDrawing
+\subsection{TDrawnControl.GetDrawing}
+\label{hmi:drawncontrol:tdrawncontrol:getdrawing}
+\index{TDrawnControl.GetDrawing}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+function GetDrawing : TDrawing
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TDrawnControl.GetDrawingClass
+\subsection{TDrawnControl.GetDrawingClass}
+\label{hmi:drawncontrol:tdrawncontrol:getdrawingclass}
+\index{TDrawnControl.GetDrawingClass}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+class function GetDrawingClass : TDrawingClass;  Virtual
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TDrawnControl.Paint
+\subsection{TDrawnControl.Paint}
+\label{hmi:drawncontrol:tdrawncontrol:paint}
+\index{TDrawnControl.Paint}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Paint;  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TDrawnControl.Resize
+\subsection{TDrawnControl.Resize}
+\label{hmi:drawncontrol:tdrawncontrol:resize}
+\index{TDrawnControl.Resize}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Resize;  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TDrawnControl.SetParent
+\subsection{TDrawnControl.SetParent}
+\label{hmi:drawncontrol:tdrawncontrol:setparent}
+\index{TDrawnControl.SetParent}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure SetParent(NewParent: TWinControl);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TDrawnControl.Drawing
+\subsection{TDrawnControl.Drawing}
+\label{hmi:drawncontrol:tdrawncontrol:drawing}
+\index{TDrawnControl.Drawing}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Drawing : TDrawing
+\end{verbatim}
+\Visibility
+public
+\Access
+Read
+\end{FPCList}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TElement
+\section{TElement}
+\label{hmi:drawncontrol:telement}
+\index{TElement}
+% Description
+\subsection{Description}
+Objects of this class are usually placed on a TDrawing object. Because TElement is abstract, it is necessary to derive concrete element classes from it first. You can use the protected methods, especially class methods for vector handling, to design. The design has to happen by overriding the abstract and other virtual methods. 
+\begin{FPCList}
+\SeeAlso
+\#HMI.drawncontrol.TLine (\pageref{hmi:drawncontrol:tline}),
+\#HMI.drawncontrol.TRectangle (\pageref{hmi:drawncontrol:trectangle}),
+\#HMI.drawncontrol.TRotativePointer (\pageref{hmi:drawncontrol:trotativepointer})\end{FPCList}
+% Method overview
+\subsection{Method overview}
+\label{hmi:drawncontrol:telement:methods}
+\begin{tabularx}{\textwidth}{llX}
+Page & Method & Description  \\ \hline
+\pageref{hmi:drawncontrol:telement:destroy} & Destroy  &  \\
+\pageref{hmi:drawncontrol:telement:getvectordirection} & GetVectorDirection  & calculates the angle of a vector being given in screen coordinates.  \\
+\pageref{hmi:drawncontrol:telement:getvectorlength} & GetVectorLength  & calculates the absolute value (length) of the given vector \\
+\pageref{hmi:drawncontrol:telement:notification} & Notification  &  \\
+\pageref{hmi:drawncontrol:telement:rotate} & Rotate  &  \\
+\pageref{hmi:drawncontrol:telement:setvectordirection} & SetVectorDirection  &  \\
+\pageref{hmi:drawncontrol:telement:setvectorlength} & SetVectorLength  &  \\
+\pageref{hmi:drawncontrol:telement:shift} & Shift  &  \\
+\pageref{hmi:drawncontrol:telement:vectorrotate} & VectorRotate  &  \\
+\pageref{hmi:drawncontrol:telement:vectorzoom} & VectorZoom  &  \\
+\pageref{hmi:drawncontrol:telement:zoom} & Zoom  &  \\
+\hline
+\end{tabularx}
+% Property overview
+\subsection{Property overview}
+\label{hmi:drawncontrol:telement:properties}
+\begin{tabularx}{\textwidth}{lllX}
+Page & Properties & Access & Description \\ \hline
+\pageref{hmi:drawncontrol:telement:brush} & Brush & r &  \\
+\pageref{hmi:drawncontrol:telement:control} & Control & rw &  \\
+\pageref{hmi:drawncontrol:telement:pen} & Pen & r &  \\
+\hline
+\end{tabularx}
+% TElement.GetVectorDirection
+\subsection{TElement.GetVectorDirection}
+\label{hmi:drawncontrol:telement:getvectordirection}
+\index{TElement.GetVectorDirection}
+\begin{FPCList}
+\Synopsis
+calculates the angle of a vector being given in screen coordinates. \Declaration 
+
+\begin{verbatim}
+class function GetVectorDirection(V: TPoint) : Extended
+\end{verbatim}
+\Visibility
+protected
+\Description
+The angle is calculated in Radiant (rad). 0 rad is the rirection of the x axis. \end{FPCList}
+% TElement.GetVectorLength
+\subsection{TElement.GetVectorLength}
+\label{hmi:drawncontrol:telement:getvectorlength}
+\index{TElement.GetVectorLength}
+\begin{FPCList}
+\Synopsis
+calculates the absolute value (length) of the given vector\Declaration 
+
+\begin{verbatim}
+class function GetVectorLength(V: TPoint) : Integer
+\end{verbatim}
+\Visibility
+protected
+\Description
+The length is measured in screen units. It is expected, that the horizontal and the vertical resolution are equal. \end{FPCList}
+% TElement.SetVectorDirection
+\subsection{TElement.SetVectorDirection}
+\label{hmi:drawncontrol:telement:setvectordirection}
+\index{TElement.SetVectorDirection}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+class procedure SetVectorDirection(var V: TPoint; Angle: Extended)
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TElement.SetVectorLength
+\subsection{TElement.SetVectorLength}
+\label{hmi:drawncontrol:telement:setvectorlength}
+\index{TElement.SetVectorLength}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+class procedure SetVectorLength(var V: TPoint; Length: Extended)
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TElement.VectorRotate
+\subsection{TElement.VectorRotate}
+\label{hmi:drawncontrol:telement:vectorrotate}
+\index{TElement.VectorRotate}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+class procedure VectorRotate(var Vec: TPoint; Angle: Extended)
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TElement.VectorZoom
+\subsection{TElement.VectorZoom}
+\label{hmi:drawncontrol:telement:vectorzoom}
+\index{TElement.VectorZoom}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+class procedure VectorZoom(var Vec: TPoint; Factor: Extended)
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TElement.Notification
+\subsection{TElement.Notification}
+\label{hmi:drawncontrol:telement:notification}
+\index{TElement.Notification}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Notification(AComponent: TComponent; Operation: TOperation)
+                      ;  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TElement.Shift
+\subsection{TElement.Shift}
+\label{hmi:drawncontrol:telement:shift}
+\index{TElement.Shift}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Shift(V: TPoint);  Virtual;  Abstract
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TElement.Rotate
+\subsection{TElement.Rotate}
+\label{hmi:drawncontrol:telement:rotate}
+\index{TElement.Rotate}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Rotate(CP: TPoint; Angle: Extended);  Virtual;  Abstract
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TElement.Zoom
+\subsection{TElement.Zoom}
+\label{hmi:drawncontrol:telement:zoom}
+\index{TElement.Zoom}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Zoom(CP: TPoint; Factor: Extended);  Virtual;  Abstract
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TElement.Destroy
+\subsection{TElement.Destroy}
+\label{hmi:drawncontrol:telement:destroy}
+\index{TElement.Destroy}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+destructor Destroy;  Override
+\end{verbatim}
+\Visibility
+public
+\end{FPCList}
+% TElement.Brush
+\subsection{TElement.Brush}
+\label{hmi:drawncontrol:telement:brush}
+\index{TElement.Brush}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Brush : TBrush
+\end{verbatim}
+\Visibility
+public
+\Access
+Read
+\end{FPCList}
+% TElement.Pen
+\subsection{TElement.Pen}
+\label{hmi:drawncontrol:telement:pen}
+\index{TElement.Pen}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Pen : TPen
+\end{verbatim}
+\Visibility
+public
+\Access
+Read
+\end{FPCList}
+% TElement.Control
+\subsection{TElement.Control}
+\label{hmi:drawncontrol:telement:control}
+\index{TElement.Control}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Control : TGraphicControl
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TLine
+\section{TLine}
+\label{hmi:drawncontrol:tline}
+\index{TLine}
+% Description
+\subsection{Description}
+straight line that starts at SP and ends at EP% Method overview
+\subsection{Method overview}
+\label{hmi:drawncontrol:tline:methods}
+\begin{tabularx}{\textwidth}{llX}
+Page & Method & Description  \\ \hline
+\pageref{hmi:drawncontrol:tline:draw} & Draw  &  \\
+\pageref{hmi:drawncontrol:tline:rotate} & Rotate  &  \\
+\pageref{hmi:drawncontrol:tline:shift} & Shift  &  \\
+\pageref{hmi:drawncontrol:tline:zoom} & Zoom  &  \\
+\hline
+\end{tabularx}
+% Property overview
+\subsection{Property overview}
+\label{hmi:drawncontrol:tline:properties}
+\begin{tabularx}{\textwidth}{lllX}
+Page & Properties & Access & Description \\ \hline
+\pageref{hmi:drawncontrol:tline:angle} & Angle & rw &  \\
+\pageref{hmi:drawncontrol:tline:ep} & EP & rw &  \\
+\pageref{hmi:drawncontrol:tline:length} & Length & rw &  \\
+\pageref{hmi:drawncontrol:tline:sp} & SP & rw &  \\
+\hline
+\end{tabularx}
+% TLine.Shift
+\subsection{TLine.Shift}
+\label{hmi:drawncontrol:tline:shift}
+\index{TLine.Shift}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Shift(V: TPoint);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TLine.Rotate
+\subsection{TLine.Rotate}
+\label{hmi:drawncontrol:tline:rotate}
+\index{TLine.Rotate}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Rotate(CP: TPoint; Angle: Extended);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TLine.Zoom
+\subsection{TLine.Zoom}
+\label{hmi:drawncontrol:tline:zoom}
+\index{TLine.Zoom}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Zoom(CP: TPoint; Factor: Extended);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TLine.Draw
+\subsection{TLine.Draw}
+\label{hmi:drawncontrol:tline:draw}
+\index{TLine.Draw}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Draw;  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TLine.Angle
+\subsection{TLine.Angle}
+\label{hmi:drawncontrol:tline:angle}
+\index{TLine.Angle}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Angle : Extended
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TLine.Length
+\subsection{TLine.Length}
+\label{hmi:drawncontrol:tline:length}
+\index{TLine.Length}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Length : Integer
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TLine.SP
+\subsection{TLine.SP}
+\label{hmi:drawncontrol:tline:sp}
+\index{TLine.SP}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property SP : TPoint
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TLine.EP
+\subsection{TLine.EP}
+\label{hmi:drawncontrol:tline:ep}
+\index{TLine.EP}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property EP : TPoint
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TRectangle
+\section{TRectangle}
+\label{hmi:drawncontrol:trectangle}
+\index{TRectangle}
+% Description
+\subsection{Description}
+TElement descendant to add a rectangle to a drawing% Method overview
+\subsection{Method overview}
+\label{hmi:drawncontrol:trectangle:methods}
+\begin{tabularx}{\textwidth}{llX}
+Page & Method & Description  \\ \hline
+\pageref{hmi:drawncontrol:trectangle:draw} & Draw  &  \\
+\pageref{hmi:drawncontrol:trectangle:rotate} & Rotate  &  \\
+\pageref{hmi:drawncontrol:trectangle:shift} & Shift  &  \\
+\pageref{hmi:drawncontrol:trectangle:zoom} & Zoom  &  \\
+\hline
+\end{tabularx}
+% Property overview
+\subsection{Property overview}
+\label{hmi:drawncontrol:trectangle:properties}
+\begin{tabularx}{\textwidth}{lllX}
+Page & Properties & Access & Description \\ \hline
+\pageref{hmi:drawncontrol:trectangle:height} & Height & rw &  \\
+\pageref{hmi:drawncontrol:trectangle:left} & Left & rw &  \\
+\pageref{hmi:drawncontrol:trectangle:top} & Top & rw &  \\
+\pageref{hmi:drawncontrol:trectangle:width} & Width & rw &  \\
+\hline
+\end{tabularx}
+% TRectangle.Draw
+\subsection{TRectangle.Draw}
+\label{hmi:drawncontrol:trectangle:draw}
+\index{TRectangle.Draw}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Draw;  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TRectangle.Rotate
+\subsection{TRectangle.Rotate}
+\label{hmi:drawncontrol:trectangle:rotate}
+\index{TRectangle.Rotate}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Rotate(CP: TPoint; Angle: Extended);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TRectangle.Shift
+\subsection{TRectangle.Shift}
+\label{hmi:drawncontrol:trectangle:shift}
+\index{TRectangle.Shift}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Shift(V: TPoint);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TRectangle.Zoom
+\subsection{TRectangle.Zoom}
+\label{hmi:drawncontrol:trectangle:zoom}
+\index{TRectangle.Zoom}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Zoom(CP: TPoint; Factor: Extended);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TRectangle.Height
+\subsection{TRectangle.Height}
+\label{hmi:drawncontrol:trectangle:height}
+\index{TRectangle.Height}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Height : Integer
+\end{verbatim}
+\Visibility
+published
+\Access
+Read,Write
+\end{FPCList}
+% TRectangle.Left
+\subsection{TRectangle.Left}
+\label{hmi:drawncontrol:trectangle:left}
+\index{TRectangle.Left}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Left : Integer
+\end{verbatim}
+\Visibility
+published
+\Access
+Read,Write
+\end{FPCList}
+% TRectangle.Top
+\subsection{TRectangle.Top}
+\label{hmi:drawncontrol:trectangle:top}
+\index{TRectangle.Top}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Top : Integer
+\end{verbatim}
+\Visibility
+published
+\Access
+Read,Write
+\end{FPCList}
+% TRectangle.Width
+\subsection{TRectangle.Width}
+\label{hmi:drawncontrol:trectangle:width}
+\index{TRectangle.Width}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Width : Integer
+\end{verbatim}
+\Visibility
+published
+\Access
+Read,Write
+\end{FPCList}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TRotativePointer
+\section{TRotativePointer}
+\label{hmi:drawncontrol:trotativepointer}
+\index{TRotativePointer}
+% Description
+\subsection{Description}
+pointer rotating around the point CP by changing the value of Angle% Method overview
+\subsection{Method overview}
+\label{hmi:drawncontrol:trotativepointer:methods}
+\begin{tabularx}{\textwidth}{llX}
+Page & Method & Description  \\ \hline
+\pageref{hmi:drawncontrol:trotativepointer:rotate} & Rotate  &  \\
+\pageref{hmi:drawncontrol:trotativepointer:shift} & Shift  &  \\
+\pageref{hmi:drawncontrol:trotativepointer:zoom} & Zoom  &  \\
+\hline
+\end{tabularx}
+% Property overview
+\subsection{Property overview}
+\label{hmi:drawncontrol:trotativepointer:properties}
+\begin{tabularx}{\textwidth}{lllX}
+Page & Properties & Access & Description \\ \hline
+\pageref{hmi:drawncontrol:trotativepointer:angle} & Angle & rw &  \\
+\pageref{hmi:drawncontrol:trotativepointer:center} & Center & rw &  \\
+\pageref{hmi:drawncontrol:trotativepointer:offset} & Offset & rw &  \\
+\pageref{hmi:drawncontrol:trotativepointer:radius} & Radius & rw &  \\
+\hline
+\end{tabularx}
+% TRotativePointer.Rotate
+\subsection{TRotativePointer.Rotate}
+\label{hmi:drawncontrol:trotativepointer:rotate}
+\index{TRotativePointer.Rotate}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Rotate(CP: TPoint; Angle: Extended);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TRotativePointer.Shift
+\subsection{TRotativePointer.Shift}
+\label{hmi:drawncontrol:trotativepointer:shift}
+\index{TRotativePointer.Shift}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Shift(V: TPoint);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TRotativePointer.Zoom
+\subsection{TRotativePointer.Zoom}
+\label{hmi:drawncontrol:trotativepointer:zoom}
+\index{TRotativePointer.Zoom}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Zoom(CP: TPoint; Factor: Extended);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TRotativePointer.Center
+\subsection{TRotativePointer.Center}
+\label{hmi:drawncontrol:trotativepointer:center}
+\index{TRotativePointer.Center}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Center : TPoint
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TRotativePointer.Angle
+\subsection{TRotativePointer.Angle}
+\label{hmi:drawncontrol:trotativepointer:angle}
+\index{TRotativePointer.Angle}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Angle : Extended
+\end{verbatim}
+\Visibility
+published
+\Access
+Read,Write
+\end{FPCList}
+% TRotativePointer.Offset
+\subsection{TRotativePointer.Offset}
+\label{hmi:drawncontrol:trotativepointer:offset}
+\index{TRotativePointer.Offset}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Offset : Extended
+\end{verbatim}
+\Visibility
+published
+\Access
+Read,Write
+\end{FPCList}
+% TRotativePointer.Radius
+\subsection{TRotativePointer.Radius}
+\label{hmi:drawncontrol:trotativepointer:radius}
+\index{TRotativePointer.Radius}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Radius : Integer
+\end{verbatim}
+\Visibility
+published
+\Access
+Read,Write
+\end{FPCList}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Reference for unit 'HMI'
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Reference for unit 'HMI'}
+\label{hmi:hmi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Used units
+\section{Used units}
+\begin{FPCltable}{lr}{Used units by unit 'HMI'}{HMI:0units}
+Name & Page \\ \hline
+DrawnControl\index{unit!DrawnControl} & \pageref{hmi:drawncontrol} \\
+LazarusPackageIntf\index{unit!LazarusPackageIntf} & \pageref{hmi:hmi:lazaruspackageintf} \\
+RetroClock\index{unit!RetroClock} & \pageref{hmi:retroclock} \\
+System\index{unit!System} & \pageref{hmi:hmi:system} \\
+\end{FPCltable}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Reference for unit 'RetroClock'
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Reference for unit 'RetroClock'}
+\label{hmi:retroclock}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Used units
+\section{Used units}
+\begin{FPCltable}{lr}{Used units by unit 'RetroClock'}{RetroClock:0units}
+Name & Page \\ \hline
+Classes\index{unit!Classes} & \pageref{hmi:retroclock:classes} \\
+Controls\index{unit!Controls} & \pageref{hmi:retroclock:controls} \\
+Dialogs\index{unit!Dialogs} & \pageref{hmi:retroclock:dialogs} \\
+DrawnControl\index{unit!DrawnControl} & \pageref{hmi:drawncontrol} \\
+Forms\index{unit!Forms} & \pageref{hmi:retroclock:forms} \\
+Graphics\index{unit!Graphics} & \pageref{hmi:retroclock:graphics} \\
+LResources\index{unit!LResources} & \pageref{hmi:retroclock:lresources} \\
+System\index{unit!System} & \pageref{hmi:retroclock:system} \\
+SysUtils\index{unit!SysUtils} & \pageref{hmi:retroclock:sysutils} \\
+\end{FPCltable}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Constants, types and variables
+\section{Constants, types and variables}
+\label{retroclockconststypesvars}
+% Types
+\subsection{Types}
+\label{retroclocktypes}
+
+\begin{verbatim}
+TClockScaleLineIndex = 0..59
+\end{verbatim}
+\label{hmi:retroclock:tclockscalelineindex}
+\index{TClockScaleLineIndex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Procedures and functions
+\section{Procedures and functions}
+\label{retroclockfunctions}
+% Register
+\subsection{Register}
+\label{hmi:retroclock:register}
+\index{Register}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Register
+\end{verbatim}
+\Visibility
+default
+\end{FPCList}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TClock
+\section{TClock}
+\label{hmi:retroclock:tclock}
+\index{TClock}
+% Method overview
+\subsection{Method overview}
+\label{hmi:retroclock:tclock:methods}
+\begin{tabularx}{\textwidth}{llX}
+Page & Method & Description  \\ \hline
+\pageref{hmi:retroclock:tclock:create} & Create  &  \\
+\pageref{hmi:retroclock:tclock:draw} & Draw  &  \\
+\pageref{hmi:retroclock:tclock:resize} & Resize  &  \\
+\hline
+\end{tabularx}
+% Property overview
+\subsection{Property overview}
+\label{hmi:retroclock:tclock:properties}
+\begin{tabularx}{\textwidth}{lllX}
+Page & Properties & Access & Description \\ \hline
+\pageref{hmi:retroclock:tclock:center} & Center & rw &  \\
+\pageref{hmi:retroclock:tclock:diameter} & Diameter & rw &  \\
+\pageref{hmi:retroclock:tclock:frame} & Frame & rw &  \\
+\pageref{hmi:retroclock:tclock:hourptr} & HourPtr & rw &  \\
+\pageref{hmi:retroclock:tclock:minptr} & MinPtr & rw &  \\
+\pageref{hmi:retroclock:tclock:radius} & Radius & rw &  \\
+\pageref{hmi:retroclock:tclock:scale} & Scale & rw &  \\
+\pageref{hmi:retroclock:tclock:secptr} & SecPtr & rw &  \\
+\pageref{hmi:retroclock:tclock:time} & Time & r &  \\
+\hline
+\end{tabularx}
+% TClock.Draw
+\subsection{TClock.Draw}
+\label{hmi:retroclock:tclock:draw}
+\index{TClock.Draw}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Draw;  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TClock.Resize
+\subsection{TClock.Resize}
+\label{hmi:retroclock:tclock:resize}
+\index{TClock.Resize}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Resize;  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TClock.Create
+\subsection{TClock.Create}
+\label{hmi:retroclock:tclock:create}
+\index{TClock.Create}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+constructor Create(AOwner: TComponent);  Override
+\end{verbatim}
+\Visibility
+public
+\end{FPCList}
+% TClock.Center
+\subsection{TClock.Center}
+\label{hmi:retroclock:tclock:center}
+\index{TClock.Center}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Center : TPoint
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TClock.Frame
+\subsection{TClock.Frame}
+\label{hmi:retroclock:tclock:frame}
+\index{TClock.Frame}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Frame : TRectangle
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TClock.Scale
+\subsection{TClock.Scale}
+\label{hmi:retroclock:tclock:scale}
+\index{TClock.Scale}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Scale : TClockScale
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TClock.HourPtr
+\subsection{TClock.HourPtr}
+\label{hmi:retroclock:tclock:hourptr}
+\index{TClock.HourPtr}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property HourPtr : TRotativePointer
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TClock.MinPtr
+\subsection{TClock.MinPtr}
+\label{hmi:retroclock:tclock:minptr}
+\index{TClock.MinPtr}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property MinPtr : TRotativePointer
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TClock.SecPtr
+\subsection{TClock.SecPtr}
+\label{hmi:retroclock:tclock:secptr}
+\index{TClock.SecPtr}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property SecPtr : TRotativePointer
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TClock.Time
+\subsection{TClock.Time}
+\label{hmi:retroclock:tclock:time}
+\index{TClock.Time}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Time : TDateTime
+\end{verbatim}
+\Visibility
+public
+\Access
+Read
+\end{FPCList}
+% TClock.Diameter
+\subsection{TClock.Diameter}
+\label{hmi:retroclock:tclock:diameter}
+\index{TClock.Diameter}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Diameter : Integer
+\end{verbatim}
+\Visibility
+published
+\Access
+Read,Write
+\end{FPCList}
+% TClock.Radius
+\subsection{TClock.Radius}
+\label{hmi:retroclock:tclock:radius}
+\index{TClock.Radius}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Radius : Integer
+\end{verbatim}
+\Visibility
+published
+\Access
+Read,Write
+\end{FPCList}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TClockScale
+\section{TClockScale}
+\label{hmi:retroclock:tclockscale}
+\index{TClockScale}
+% Method overview
+\subsection{Method overview}
+\label{hmi:retroclock:tclockscale:methods}
+\begin{tabularx}{\textwidth}{llX}
+Page & Method & Description  \\ \hline
+\pageref{hmi:retroclock:tclockscale:create} & Create  &  \\
+\pageref{hmi:retroclock:tclockscale:resize} & Resize  &  \\
+\pageref{hmi:retroclock:tclockscale:shift} & Shift  &  \\
+\hline
+\end{tabularx}
+% Property overview
+\subsection{Property overview}
+\label{hmi:retroclock:tclockscale:properties}
+\begin{tabularx}{\textwidth}{lllX}
+Page & Properties & Access & Description \\ \hline
+\pageref{hmi:retroclock:tclockscale:center} & Center & rw &  \\
+\pageref{hmi:retroclock:tclockscale:radius} & Radius & rw &  \\
+\hline
+\end{tabularx}
+% TClockScale.Resize
+\subsection{TClockScale.Resize}
+\label{hmi:retroclock:tclockscale:resize}
+\index{TClockScale.Resize}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Resize;  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TClockScale.Shift
+\subsection{TClockScale.Shift}
+\label{hmi:retroclock:tclockscale:shift}
+\index{TClockScale.Shift}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Shift(V: TPoint);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TClockScale.Create
+\subsection{TClockScale.Create}
+\label{hmi:retroclock:tclockscale:create}
+\index{TClockScale.Create}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+constructor Create(AOwner: TComponent);  Override
+\end{verbatim}
+\Visibility
+public
+\end{FPCList}
+% TClockScale.Center
+\subsection{TClockScale.Center}
+\label{hmi:retroclock:tclockscale:center}
+\index{TClockScale.Center}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Center : TPoint
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TClockScale.Radius
+\subsection{TClockScale.Radius}
+\label{hmi:retroclock:tclockscale:radius}
+\index{TClockScale.Radius}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Radius : Integer
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TClockScaleLines
+\section{TClockScaleLines}
+\label{hmi:retroclock:tclockscalelines}
+\index{TClockScaleLines}
+% Method overview
+\subsection{Method overview}
+\label{hmi:retroclock:tclockscalelines:methods}
+\begin{tabularx}{\textwidth}{llX}
+Page & Method & Description  \\ \hline
+\pageref{hmi:retroclock:tclockscalelines:create} & Create  &  \\
+\pageref{hmi:retroclock:tclockscalelines:resize} & Resize  &  \\
+\pageref{hmi:retroclock:tclockscalelines:zoom} & Zoom  &  \\
+\hline
+\end{tabularx}
+% Property overview
+\subsection{Property overview}
+\label{hmi:retroclock:tclockscalelines:properties}
+\begin{tabularx}{\textwidth}{lllX}
+Page & Properties & Access & Description \\ \hline
+\pageref{hmi:retroclock:tclockscalelines:baselinelength} & BaseLineLength & rw &  \\
+\pageref{hmi:retroclock:tclockscalelines:center} & Center & rw &  \\
+\pageref{hmi:retroclock:tclockscalelines:lines} & Lines & r &  \\
+\pageref{hmi:retroclock:tclockscalelines:radius} & Radius & rw &  \\
+\hline
+\end{tabularx}
+% TClockScaleLines.Resize
+\subsection{TClockScaleLines.Resize}
+\label{hmi:retroclock:tclockscalelines:resize}
+\index{TClockScaleLines.Resize}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Resize;  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TClockScaleLines.Zoom
+\subsection{TClockScaleLines.Zoom}
+\label{hmi:retroclock:tclockscalelines:zoom}
+\index{TClockScaleLines.Zoom}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+procedure Zoom(CP: TPoint; Factor: Extended);  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TClockScaleLines.Create
+\subsection{TClockScaleLines.Create}
+\label{hmi:retroclock:tclockscalelines:create}
+\index{TClockScaleLines.Create}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+constructor Create(AOwner: TComponent);  Override
+\end{verbatim}
+\Visibility
+public
+\end{FPCList}
+% TClockScaleLines.Center
+\subsection{TClockScaleLines.Center}
+\label{hmi:retroclock:tclockscalelines:center}
+\index{TClockScaleLines.Center}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Center : TPoint
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TClockScaleLines.Lines
+\subsection{TClockScaleLines.Lines}
+\label{hmi:retroclock:tclockscalelines:lines}
+\index{TClockScaleLines.Lines}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Lines[Index: TClockScaleLineIndex]: TLine
+\end{verbatim}
+\Visibility
+public
+\Access
+Read
+\end{FPCList}
+% TClockScaleLines.Radius
+\subsection{TClockScaleLines.Radius}
+\label{hmi:retroclock:tclockscalelines:radius}
+\index{TClockScaleLines.Radius}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Radius : Integer
+\end{verbatim}
+\Visibility
+public
+\Access
+Read,Write
+\end{FPCList}
+% TClockScaleLines.BaseLineLength
+\subsection{TClockScaleLines.BaseLineLength}
+\label{hmi:retroclock:tclockscalelines:baselinelength}
+\index{TClockScaleLines.BaseLineLength}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property BaseLineLength : Integer
+\end{verbatim}
+\Visibility
+published
+\Access
+Read,Write
+\end{FPCList}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TRetroClock
+\section{TRetroClock}
+\label{hmi:retroclock:tretroclock}
+\index{TRetroClock}
+% Method overview
+\subsection{Method overview}
+\label{hmi:retroclock:tretroclock:methods}
+\begin{tabularx}{\textwidth}{llX}
+Page & Method & Description  \\ \hline
+\pageref{hmi:retroclock:tretroclock:create} & Create  &  \\
+\pageref{hmi:retroclock:tretroclock:getdrawingclass} & GetDrawingClass  &  \\
+\hline
+\end{tabularx}
+% Property overview
+\subsection{Property overview}
+\label{hmi:retroclock:tretroclock:properties}
+\begin{tabularx}{\textwidth}{lllX}
+Page & Properties & Access & Description \\ \hline
+\pageref{hmi:retroclock:tretroclock:align} & Align &  &  \\
+\pageref{hmi:retroclock:tretroclock:anchors} & Anchors &  &  \\
+\pageref{hmi:retroclock:tretroclock:clock} & Clock & r &  \\
+\hline
+\end{tabularx}
+% TRetroClock.GetDrawingClass
+\subsection{TRetroClock.GetDrawingClass}
+\label{hmi:retroclock:tretroclock:getdrawingclass}
+\index{TRetroClock.GetDrawingClass}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+class function GetDrawingClass : TDrawingClass;  Override
+\end{verbatim}
+\Visibility
+protected
+\end{FPCList}
+% TRetroClock.Create
+\subsection{TRetroClock.Create}
+\label{hmi:retroclock:tretroclock:create}
+\index{TRetroClock.Create}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+constructor Create(AOwner: TComponent);  Override
+\end{verbatim}
+\Visibility
+public
+\end{FPCList}
+% TRetroClock.Clock
+\subsection{TRetroClock.Clock}
+\label{hmi:retroclock:tretroclock:clock}
+\index{TRetroClock.Clock}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Clock : TClock
+\end{verbatim}
+\Visibility
+public
+\Access
+Read
+\end{FPCList}
+% TRetroClock.Align
+\subsection{TRetroClock.Align}
+\label{hmi:retroclock:tretroclock:align}
+\index{TRetroClock.Align}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Align : 
+\end{verbatim}
+\Visibility
+published
+\Access
+
+\end{FPCList}
+% TRetroClock.Anchors
+\subsection{TRetroClock.Anchors}
+\label{hmi:retroclock:tretroclock:anchors}
+\index{TRetroClock.Anchors}
+\begin{FPCList}
+\Declaration 
+
+\begin{verbatim}
+Property Anchors : 
+\end{verbatim}
+\Visibility
+published
+\Access
+
+\end{FPCList}

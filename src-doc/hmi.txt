@@ -1,0 +1,1912 @@
+
+========================================================================
+Chapter 1 : Reference for unit 'DrawnControl'
+========================================================================
+
+
+
+------------------------------------------------------------------------
+Section 1.1 : Used units
+------------------------------------------------------------------------
+
+
+Unit Name
+---------
+Classes
+Controls
+Dialogs
+Forms
+Graphics
+LResources
+System
+SysUtils
+
+
+------------------------------------------------------------------------
+Section 1.2 : Overview
+------------------------------------------------------------------------
+
+
+The unit implements a TGraphicControl class that can display a drawing
+on its canvas. The interface provides methods to override, if the
+drawing is not static, for example, that can change, if the size or
+position of the control or the time change. 
+------------------------------------------------------------------------
+Section 1.3 : 
+------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------
+Section 1.4 : Constants, types and variables
+------------------------------------------------------------------------
+
+
+
+1.4.1 : Types
+------------------------------------------------------------------------
+
+
+
+TDrawingClass = Class of TDrawing
+The class method [#HMI.drawncontrol.TDrawnControl.GetDrawingClass] 
+uses this to say, for which drawing class the control is made. 
+
+------------------------------------------------------------------------
+Section 1.5 : Procedures and functions
+------------------------------------------------------------------------
+
+
+
+1.5.1 : Register
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Register
+
+Visibility:
+default
+
+
+------------------------------------------------------------------------
+Section 1.6 : IDrawnControl
+------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------
+Section 1.7 : TCircle
+------------------------------------------------------------------------
+
+
+
+1.7.1 : Description
+------------------------------------------------------------------------
+
+
+TElement descendant to add a circle to a TDrawing object
+1.7.2 : Property overview
+------------------------------------------------------------------------
+
+
+Properties Access Description
+-----------------------------
+Center rw  
+Diameter rw  
+Radius rw  
+------------------------------------------------------------------------
+
+
+1.7.3 : TCircle.Center
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Center : TPoint
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+1.7.4 : TCircle.Diameter
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Diameter : Integer
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+1.7.5 : TCircle.Radius
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Radius : Integer
+
+Visibility:
+published
+
+Access:
+Read,Write
+
+
+------------------------------------------------------------------------
+Section 1.8 : TDrawing
+------------------------------------------------------------------------
+
+
+
+1.8.1 : Description
+------------------------------------------------------------------------
+
+
+TDrawing or a descendant is used to draw a graphical image for a control
+at runtime and context sensitive (not necessarily static). Because such
+drawing is not dependent on a special graphical resolution (like raster
+graphic images), large images don't require large memory, and small
+images can be stretched without a loss of quality (resolution). 
+1.8.2 : Method overview
+------------------------------------------------------------------------
+
+
+Method Description
+------------------
+AddElement  
+Destroy  
+Draw  
+Resize  
+Rotate  
+Shift  
+Zoom
+ 
+------------------------------------------------------------------------
+
+
+1.8.3 : Property overview
+------------------------------------------------------------------------
+
+
+Properties Access Description
+-----------------------------
+ElementCount r  
+ElementList r  
+Elements r  
+------------------------------------------------------------------------
+
+
+1.8.4 : TDrawing.AddElement
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+function AddElement(AElement: TElement) : Integer
+
+Visibility:
+protected
+
+
+1.8.5 : TDrawing.Draw
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Draw;  Override
+
+Visibility:
+protected
+
+
+1.8.6 : TDrawing.Shift
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Shift(V: TPoint);  Override
+
+Visibility:
+protected
+
+
+1.8.7 : TDrawing.Rotate
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Rotate(CP: TPoint; Angle: Extended);  Override
+
+Visibility:
+protected
+
+
+1.8.8 : TDrawing.Resize
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Resize;  Override
+
+Visibility:
+protected
+
+
+1.8.9 : TDrawing.Zoom
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Zoom(CP: TPoint; Factor: Extended);  Override
+
+Visibility:
+protected
+
+
+1.8.10 : TDrawing.Destroy
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+destructor Destroy;  Override
+
+Visibility:
+public
+
+
+1.8.11 : TDrawing.ElementCount
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property ElementCount : Integer
+
+Visibility:
+protected
+
+Access:
+Read
+
+
+1.8.12 : TDrawing.ElementList
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property ElementList : TFpList
+
+Visibility:
+protected
+
+Access:
+Read
+
+
+1.8.13 : TDrawing.Elements
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Elements[Index: Integer]: TElement
+
+Visibility:
+protected
+
+Access:
+Read
+
+
+------------------------------------------------------------------------
+Section 1.9 : TDrawnControl
+------------------------------------------------------------------------
+
+
+
+1.9.1 : Description
+------------------------------------------------------------------------
+
+
+control, that displays a drawn graphic on its surface
+1.9.2 : Method overview
+------------------------------------------------------------------------
+
+
+Method Description
+------------------
+GetDrawing  
+GetDrawingClass  
+Paint  
+Resize  
+SetParent  
+------------------------------------------------------------------------
+
+
+1.9.3 : Property overview
+------------------------------------------------------------------------
+
+
+Properties Access Description
+-----------------------------
+Drawing r  
+------------------------------------------------------------------------
+
+
+1.9.4 : TDrawnControl.GetDrawing
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+function GetDrawing : TDrawing
+
+Visibility:
+protected
+
+
+1.9.5 : TDrawnControl.GetDrawingClass
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+class function GetDrawingClass : TDrawingClass;  Virtual
+
+Visibility:
+protected
+
+
+1.9.6 : TDrawnControl.Paint
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Paint;  Override
+
+Visibility:
+protected
+
+
+1.9.7 : TDrawnControl.Resize
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Resize;  Override
+
+Visibility:
+protected
+
+
+1.9.8 : TDrawnControl.SetParent
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure SetParent(NewParent: TWinControl);  Override
+
+Visibility:
+protected
+
+
+1.9.9 : TDrawnControl.Drawing
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Drawing : TDrawing
+
+Visibility:
+public
+
+Access:
+Read
+
+
+------------------------------------------------------------------------
+Section 1.10 : TElement
+------------------------------------------------------------------------
+
+
+
+1.10.1 : Description
+------------------------------------------------------------------------
+
+
+Objects of this class are usually placed on a TDrawing object. Because
+TElement is abstract, it is necessary to derive concrete element classes
+from it first. You can use the protected methods, especially class
+methods for vector handling, to design. The design has to happen by
+overriding the abstract and other virtual methods. 
+See also:
+[#HMI.drawncontrol.TLine] ,
+[#HMI.drawncontrol.TRectangle] ,
+[#HMI.drawncontrol.TRotativePointer] 
+
+1.10.2 : Method overview
+------------------------------------------------------------------------
+
+
+Method Description
+------------------
+Destroy  
+GetVectorDirection calculates the angle of a vector being
+given in screen
+coordinates.  
+GetVectorLength calculates the absolute value
+(length)
+of the given vector 
+Notification  
+Rotate  
+SetVectorDirection
+ 
+SetVectorLength  
+Shift  
+VectorRotate  
+VectorZoom  
+Zoom  
+------------------------------------------------------------------------
+
+1.10.3 : Property overview
+------------------------------------------------------------------------
+
+
+Properties Access Description
+-----------------------------
+Brush r  
+Control rw  
+Pen r  
+------------------------------------------------------------------------
+
+
+1.10.4 : TElement.GetVectorDirection
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Synopsis:
+calculates the angle of a vector being given in screen coordinates. 
+Declaration:
+
+class function GetVectorDirection(V: TPoint) : Extended
+
+Visibility:
+protected
+
+Description:
+The angle is calculated in Radiant (rad). 0 rad is the rirection of the
+x axis. 
+
+1.10.5 : TElement.GetVectorLength
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Synopsis:
+calculates the absolute value (length) of the given vector
+Declaration:
+
+class function GetVectorLength(V: TPoint) : Integer
+
+Visibility:
+protected
+
+Description:
+The length is measured in screen units. It is expected, that the
+horizontal and the vertical resolution are equal. 
+
+1.10.6 : TElement.SetVectorDirection
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+class procedure SetVectorDirection(var V: TPoint; Angle: Extended)
+
+Visibility:
+protected
+
+
+1.10.7 : TElement.SetVectorLength
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+class procedure SetVectorLength(var V: TPoint; Length: Extended)
+
+Visibility:
+protected
+
+
+1.10.8 : TElement.VectorRotate
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+class procedure VectorRotate(var Vec: TPoint; Angle: Extended)
+
+Visibility:
+protected
+
+
+1.10.9 : TElement.VectorZoom
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+class procedure VectorZoom(var Vec: TPoint; Factor: Extended)
+
+Visibility:
+protected
+
+
+1.10.10 : TElement.Notification
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Notification(AComponent: TComponent; Operation: TOperation)
+  
+                   ;  Override
+
+Visibility:
+protected
+
+
+1.10.11 : TElement.Shift
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Shift(V: TPoint);  Virtual;  Abstract
+
+Visibility:
+protected
+
+
+1.10.12 : TElement.Rotate
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Rotate(CP: TPoint; Angle: Extended);  Virtual;  Abstract
+
+Visibility:
+protected
+
+
+1.10.13 : TElement.Zoom
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Zoom(CP: TPoint; Factor: Extended);  Virtual;  Abstract
+
+Visibility:
+protected
+
+
+1.10.14 : TElement.Destroy
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+destructor Destroy;  Override
+
+Visibility:
+public
+
+
+1.10.15 : TElement.Brush
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Brush : TBrush
+
+Visibility:
+public
+
+Access:
+Read
+
+
+1.10.16 : TElement.Pen
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Pen : TPen
+
+Visibility:
+public
+
+Access:
+Read
+
+
+1.10.17 : TElement.Control
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Control : TGraphicControl
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+------------------------------------------------------------------------
+Section 1.11 : TLine
+------------------------------------------------------------------------
+
+
+
+1.11.1 : Description
+------------------------------------------------------------------------
+
+
+straight line that starts at SP and ends at EP
+1.11.2 : Method overview
+------------------------------------------------------------------------
+
+
+Method Description
+------------------
+Draw  
+Rotate  
+Shift  
+Zoom  
+------------------------------------------------------------------------
+
+
+1.11.3 : Property overview
+------------------------------------------------------------------------
+
+
+Properties Access Description
+-----------------------------
+Angle rw  
+EP rw  
+Length rw  
+SP rw  
+------------------------------------------------------------------------
+
+
+1.11.4 : TLine.Shift
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Shift(V: TPoint);  Override
+
+Visibility:
+protected
+
+
+1.11.5 : TLine.Rotate
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Rotate(CP: TPoint; Angle: Extended);  Override
+
+Visibility:
+protected
+
+
+1.11.6 : TLine.Zoom
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Zoom(CP: TPoint; Factor: Extended);  Override
+
+Visibility:
+protected
+
+
+1.11.7 : TLine.Draw
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Draw;  Override
+
+Visibility:
+protected
+
+
+1.11.8 : TLine.Angle
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Angle : Extended
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+1.11.9 : TLine.Length
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Length : Integer
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+1.11.10 : TLine.SP
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property SP : TPoint
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+1.11.11 : TLine.EP
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property EP : TPoint
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+------------------------------------------------------------------------
+Section 1.12 : TRectangle
+------------------------------------------------------------------------
+
+
+
+1.12.1 : Description
+------------------------------------------------------------------------
+
+
+TElement descendant to add a rectangle to a drawing
+1.12.2 : Method overview
+------------------------------------------------------------------------
+
+
+Method Description
+------------------
+Draw  
+Rotate  
+Shift  
+Zoom  
+------------------------------------------------------------------------
+
+
+1.12.3 : Property overview
+------------------------------------------------------------------------
+
+
+Properties Access Description
+-----------------------------
+Height rw  
+Left rw  
+Top rw  
+Width rw  
+------------------------------------------------------------------------
+
+
+1.12.4 : TRectangle.Draw
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Draw;  Override
+
+Visibility:
+protected
+
+
+1.12.5 : TRectangle.Rotate
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Rotate(CP: TPoint; Angle: Extended);  Override
+
+Visibility:
+protected
+
+
+1.12.6 : TRectangle.Shift
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Shift(V: TPoint);  Override
+
+Visibility:
+protected
+
+
+1.12.7 : TRectangle.Zoom
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Zoom(CP: TPoint; Factor: Extended);  Override
+
+Visibility:
+protected
+
+
+1.12.8 : TRectangle.Height
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Height : Integer
+
+Visibility:
+published
+
+Access:
+Read,Write
+
+
+1.12.9 : TRectangle.Left
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Left : Integer
+
+Visibility:
+published
+
+Access:
+Read,Write
+
+
+1.12.10 : TRectangle.Top
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Top : Integer
+
+Visibility:
+published
+
+Access:
+Read,Write
+
+
+1.12.11 : TRectangle.Width
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Width : Integer
+
+Visibility:
+published
+
+Access:
+Read,Write
+
+
+------------------------------------------------------------------------
+Section 1.13 : TRotativePointer
+------------------------------------------------------------------------
+
+
+
+1.13.1 : Description
+------------------------------------------------------------------------
+
+
+pointer rotating around the point CP by changing the value of Angle
+1.13.2 : Method overview
+------------------------------------------------------------------------
+
+
+Method Description
+------------------
+Rotate  
+Shift  
+Zoom  
+------------------------------------------------------------------------
+
+
+1.13.3 : Property overview
+------------------------------------------------------------------------
+
+
+Properties Access Description
+-----------------------------
+Angle rw  
+Center rw  
+Offset rw  
+Radius rw  
+------------------------------------------------------------------------
+
+
+1.13.4 : TRotativePointer.Rotate
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Rotate(CP: TPoint; Angle: Extended);  Override
+
+Visibility:
+protected
+
+
+1.13.5 : TRotativePointer.Shift
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Shift(V: TPoint);  Override
+
+Visibility:
+protected
+
+
+1.13.6 : TRotativePointer.Zoom
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Zoom(CP: TPoint; Factor: Extended);  Override
+
+Visibility:
+protected
+
+
+1.13.7 : TRotativePointer.Center
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Center : TPoint
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+1.13.8 : TRotativePointer.Angle
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Angle : Extended
+
+Visibility:
+published
+
+Access:
+Read,Write
+
+
+1.13.9 : TRotativePointer.Offset
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Offset : Extended
+
+Visibility:
+published
+
+Access:
+Read,Write
+
+
+1.13.10 : TRotativePointer.Radius
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Radius : Integer
+
+Visibility:
+published
+
+Access:
+Read,Write
+
+
+========================================================================
+Chapter 2 : Reference for unit 'HMI'
+========================================================================
+
+
+
+------------------------------------------------------------------------
+Section 2.1 : Used units
+------------------------------------------------------------------------
+
+
+Unit Name
+---------
+DrawnControl
+LazarusPackageIntf
+RetroClock
+System
+
+
+========================================================================
+Chapter 3 : Reference for unit 'RetroClock'
+========================================================================
+
+
+
+------------------------------------------------------------------------
+Section 3.1 : Used units
+------------------------------------------------------------------------
+
+
+Unit Name
+---------
+Classes
+Controls
+Dialogs
+DrawnControl
+Forms
+Graphics
+LResources
+System
+SysUtils
+
+
+------------------------------------------------------------------------
+Section 3.2 : Constants, types and variables
+------------------------------------------------------------------------
+
+
+
+3.2.1 : Types
+------------------------------------------------------------------------
+
+
+
+TClockScaleLineIndex = 0..59
+
+
+------------------------------------------------------------------------
+Section 3.3 : Procedures and functions
+------------------------------------------------------------------------
+
+
+
+3.3.1 : Register
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Register
+
+Visibility:
+default
+
+
+------------------------------------------------------------------------
+Section 3.4 : TClock
+------------------------------------------------------------------------
+
+
+
+3.4.1 : Method overview
+------------------------------------------------------------------------
+
+
+Method Description
+------------------
+Create  
+Draw  
+Resize  
+------------------------------------------------------------------------
+
+
+3.4.2 : Property overview
+------------------------------------------------------------------------
+
+
+Properties Access Description
+-----------------------------
+Center rw  
+Diameter rw  
+Frame rw  
+HourPtr rw  
+MinPtr rw  
+Radius
+rw  
+Scale rw  
+SecPtr rw  
+Time r  
+------------------------------------------------------------------------
+
+
+3.4.3 : TClock.Draw
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Draw;  Override
+
+Visibility:
+protected
+
+
+3.4.4 : TClock.Resize
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Resize;  Override
+
+Visibility:
+protected
+
+
+3.4.5 : TClock.Create
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+constructor Create(AOwner: TComponent);  Override
+
+Visibility:
+public
+
+
+3.4.6 : TClock.Center
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Center : TPoint
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+3.4.7 : TClock.Frame
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Frame : TRectangle
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+3.4.8 : TClock.Scale
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Scale : TClockScale
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+3.4.9 : TClock.HourPtr
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property HourPtr : TRotativePointer
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+3.4.10 : TClock.MinPtr
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property MinPtr : TRotativePointer
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+3.4.11 : TClock.SecPtr
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property SecPtr : TRotativePointer
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+3.4.12 : TClock.Time
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Time : TDateTime
+
+Visibility:
+public
+
+Access:
+Read
+
+
+3.4.13 : TClock.Diameter
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Diameter : Integer
+
+Visibility:
+published
+
+Access:
+Read,Write
+
+
+3.4.14 : TClock.Radius
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Radius : Integer
+
+Visibility:
+published
+
+Access:
+Read,Write
+
+
+------------------------------------------------------------------------
+Section 3.5 : TClockScale
+------------------------------------------------------------------------
+
+
+
+3.5.1 : Method overview
+------------------------------------------------------------------------
+
+
+Method Description
+------------------
+Create  
+Resize  
+Shift  
+------------------------------------------------------------------------
+
+
+3.5.2 : Property overview
+------------------------------------------------------------------------
+
+
+Properties Access Description
+-----------------------------
+Center rw  
+Radius rw  
+------------------------------------------------------------------------
+
+
+3.5.3 : TClockScale.Resize
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Resize;  Override
+
+Visibility:
+protected
+
+
+3.5.4 : TClockScale.Shift
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Shift(V: TPoint);  Override
+
+Visibility:
+protected
+
+
+3.5.5 : TClockScale.Create
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+constructor Create(AOwner: TComponent);  Override
+
+Visibility:
+public
+
+
+3.5.6 : TClockScale.Center
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Center : TPoint
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+3.5.7 : TClockScale.Radius
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Radius : Integer
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+------------------------------------------------------------------------
+Section 3.6 : TClockScaleLines
+------------------------------------------------------------------------
+
+
+
+3.6.1 : Method overview
+------------------------------------------------------------------------
+
+
+Method Description
+------------------
+Create  
+Resize  
+Zoom  
+------------------------------------------------------------------------
+
+
+3.6.2 : Property overview
+------------------------------------------------------------------------
+
+
+Properties Access Description
+-----------------------------
+BaseLineLength rw  
+Center rw  
+Lines r  
+Radius rw  
+------------------------------------------------------------------------
+
+
+3.6.3 : TClockScaleLines.Resize
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Resize;  Override
+
+Visibility:
+protected
+
+
+3.6.4 : TClockScaleLines.Zoom
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+procedure Zoom(CP: TPoint; Factor: Extended);  Override
+
+Visibility:
+protected
+
+
+3.6.5 : TClockScaleLines.Create
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+constructor Create(AOwner: TComponent);  Override
+
+Visibility:
+public
+
+
+3.6.6 : TClockScaleLines.Center
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Center : TPoint
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+3.6.7 : TClockScaleLines.Lines
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Lines[Index: TClockScaleLineIndex]: TLine
+
+Visibility:
+public
+
+Access:
+Read
+
+
+3.6.8 : TClockScaleLines.Radius
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Radius : Integer
+
+Visibility:
+public
+
+Access:
+Read,Write
+
+
+3.6.9 : TClockScaleLines.BaseLineLength
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property BaseLineLength : Integer
+
+Visibility:
+published
+
+Access:
+Read,Write
+
+
+------------------------------------------------------------------------
+Section 3.7 : TRetroClock
+------------------------------------------------------------------------
+
+
+
+3.7.1 : Method overview
+------------------------------------------------------------------------
+
+
+Method Description
+------------------
+Create  
+GetDrawingClass  
+------------------------------------------------------------------------
+
+
+3.7.2 : Property overview
+------------------------------------------------------------------------
+
+
+Properties Access Description
+-----------------------------
+Align   
+Anchors   
+Clock r  
+------------------------------------------------------------------------
+
+
+3.7.3 : TRetroClock.GetDrawingClass
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+class function GetDrawingClass : TDrawingClass;  Override
+
+Visibility:
+protected
+
+
+3.7.4 : TRetroClock.Create
+------------------------------------------------------------------------
+
+
+Procedure:
+
+Declaration:
+
+constructor Create(AOwner: TComponent);  Override
+
+Visibility:
+public
+
+
+3.7.5 : TRetroClock.Clock
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Clock : TClock
+
+Visibility:
+public
+
+Access:
+Read
+
+
+3.7.6 : TRetroClock.Align
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Align : 
+
+Visibility:
+published
+
+Access:
+
+
+
+3.7.7 : TRetroClock.Anchors
+------------------------------------------------------------------------
+
+
+
+Property:
+
+Declaration:
+
+Property Anchors : 
+
+Visibility:
+published
+
+Access:
+
+

@@ -9,6 +9,10 @@ uses
 
 type
 
+  IDrawnControl = interface
+
+  end;
+
   TDrawing = class;
 
   { TElement }
@@ -105,6 +109,8 @@ type
     procedure SetWidth(AValue: Integer);
   protected
     procedure Draw; override;
+    procedure Rotate(CP: TPoint; Angle: Extended); override;
+    procedure Shift(V: TPoint); override;
     procedure Zoom(CP: TPoint; Factor: Extended); override;
   published
     property Height: Integer read GetHeight write SetHeight;
@@ -229,6 +235,22 @@ procedure TRectangle.Draw;
 begin
   inherited Draw;
   Control.Canvas.Rectangle(FR);
+end;
+
+procedure TRectangle.Rotate(CP: TPoint; Angle: Extended);
+var V1, V2: TPoint;
+begin
+  V1 := FR.TopLeft - CP;
+  V2 := FR.BottomRight - CP;
+  VectorRotate(V1, Angle);
+  VectorRotate(V2, Angle);
+  FR.TopLeft := CP + V1;
+  FR.BottomRight := CP + V2;
+end;
+
+procedure TRectangle.Shift(V: TPoint);
+begin
+  FR.Offset(V)
 end;
 
 procedure TRectangle.Zoom(CP: TPoint; Factor: Extended);

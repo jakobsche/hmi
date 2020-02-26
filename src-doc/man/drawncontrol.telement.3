@@ -1,0 +1,41 @@
+.TH "TElement" "3" "February 2020" "hmi" ""
+
+.SH NAME
+TElement \- base class for elements, that can be added to a TDrawing object
+
+.SH Description
+Objects of this class are usually placed on a TDrawing object. Because TElement is abstract, it is necessary to derive concrete element classes from it first. You can use the protected methods, especially class methods for vector handling, to design. The design has to happen by overriding the abstract and other virtual methods. 
+
+.SH METHODS
+.TP
+.B GetVectorDirection
+calculates the angle of a vector being given in screen coordinates. 
+.TP
+.B GetVectorLength
+calculates the absolute value (length) of the given vector
+.TP
+.B SetVectorDirection
+.TP
+.B SetVectorLength
+.TP
+.B VectorRotate
+.TP
+.B VectorZoom
+.TP
+.B Notification
+.TP
+.B Shift
+.TP
+.B Rotate
+.TP
+.B Zoom
+.TP
+.B Destroy
+
+.SH Property overview
+.TP
+.BI Brush  r
+.TP
+.BI Control  rw
+.TP
+.BI Pen  r

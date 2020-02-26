@@ -1,0 +1,28 @@
+#!/bin/sh 
+
+# Projektdatei für fpdoc erstellen
+#=================================
+
+# Damit die Dokumentation immer vollständig ist, müssen die Quellcodedateien, die einbezogen werden sollen, als --input-Option angegeben werden. Dann muß dieses Skript ausgeführt werden, um eine Projektdatei für fpdoc zu erstellen
+
+fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=html --verbose --write-project=hmi-html.dp --output=./src-doc/html
+
+# fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=pdf --verbose --write-project=hmi-pdf.dp --output=./src-doc/hmi.pdf
+
+fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=latex --verbose --write-project=hmi-latex.dp --output=./src-doc/hmi.tex
+
+fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=chm --verbose --write-project=hmi-chm.dp --output=./src-doc/hmi.chm
+ 
+fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=htm --verbose --write-project=hmi-htm.dp --output=./src-doc/htm
+
+fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=ipf --verbose --write-project=hmi-ipf.dp --output=./src-doc/hmi.ipf
+
+fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=man --verbose --write-project=hmi-man.dp --output=./src-doc/man
+
+fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=rtf --verbose --write-project=hmi-rtf.dp --output=./src-doc/hmi.rtf
+
+fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=txt --verbose --write-project=hmi-txt.dp --output=./src-doc/hmi.txt
+ 
+fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=xml --verbose --write-project=hmi-xml.dp --output=./src-doc/fpdoc-xml
+
+# fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=dxml --verbose --write-project=hmi-dxml.dp --output=./src-doc/dxml

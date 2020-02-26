@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions><package name="HMI"><module name="DrawnControl"><short>declaring a TGraphicControl descendant with a Drawing on its Canvas</short><element name="TDrawing"><short>drawing class, usually containing objects of TElement descendants, that is drawn on a control's canvas</short>
+      <descr>TDrawing or a descendant is used to draw a graphical image for a control at runtime
+and context sensitive (not necessarily static). Because such drawing is not dependent
+on a special graphical resolution (like raster graphic images), large images don't
+require large memory, and small images can be stretched without a loss of quality
+(resolution).
+</descr>
+      </element><element name="TElement"><short>base class for elements, that can be added to a TDrawing object</short>
+      <descr>Objects of this class are usually placed on a TDrawing object. Because TElement
+is abstract, it is necessary to derive concrete element classes from it first.
+You can use the protected methods, especially class methods for vector handling,
+to design. The design has to happen by overriding the abstract and other virtual
+methods.
+</descr><seealso><link id="#HMI.drawncontrol.TLine"/><link id="#HMI.drawncontrol.TRectangle"/><link id="#HMI.drawncontrol.TRotativePointer"/>
+        </seealso>
+      </element><element name="TLine"><short>straight line that starts at SP and ends at EP</short>
+      </element><element name="TRotativePointer"><short>pointer rotating around the point CP by changing the value of Angle</short>
+      </element><element name="TElement.GetVectorDirection"><short>calculates the angle of a vector being given in screen coordinates. </short>
+      <descr>The angle is calculated in Radiant (rad).
+0 rad is the rirection of the x axis.
+</descr>
+      </element><element name="TElement.GetVectorLength"><short>calculates the absolute value (length) of the given vector</short>
+      <descr>The length is measured in screen units. It is expected, that the horizontal and
+the vertical resolution are equal.
+</descr>
+      </element>
+    <descr>The unit implements a TGraphicControl class that can display a drawing on its
+canvas. The interface provides methods to override, if the drawing is not static,
+for example, that can change, if the size or position of the control or the time
+change.
+</descr><seealso><link id="drawncontrol.TDrawing"/><link id="drawncontrol.TDrawnControl"/>
+      </seealso><topic name="TDrawing topic 1"/><element name="TRectangle"><short>TElement descendant to add a rectangle to a drawing</short>
+      </element><element name="TCircle"><short>TElement descendant to add a circle to a TDrawing object</short>
+      </element><element name="TDrawingClass"><short>used to determine the concrete drawing class of a control, that is derived from TDrawing</short><descr>The class method <link id="#HMI.drawncontrol.TDrawnControl.GetDrawingClass"/> uses this to say, for which drawing
+class the control is made.
+</descr>
+      </element><element name="TDrawnControl"><short>control, that displays a drawn graphic on its surface</short>
+      </element><element name="TElement.GetVectorDirection.V"/>
+    </module>
+  </package>
+</fpdoc-descriptions>

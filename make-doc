@@ -1,0 +1,28 @@
+#!/bin/sh 
+
+# Packagedokumentation erstellen
+#===============================
+
+# Wenn die Dokumentationsprojektdatei vorhanden ist, wird mit diesem Skript die Dokumentation erzeugt.
+
+fpdoc --project=hmi-html.dp --verbose
+
+fpdoc --project=hmi-chm.dp --verbose
+
+fpdoc --project=hmi-htm.dp --verbose
+
+fpdoc --project=hmi-ipf.dp --verbose
+
+fpdoc --project=hmi-latex.dp --verbose
+
+fpdoc --project=hmi-man.dp --verbose
+
+# fpdoc --project=hmi-pdf.dp --verbose
+
+fpdoc --project=hmi-rtf.dp --verbose
+
+fpdoc --project=hmi-txt.dp --verbose
+
+fpdoc --project=hmi-xml.dp --verbose
+
+# fpdoc --project=hmi-dxml.dp --verbose

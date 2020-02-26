@@ -1,0 +1,31 @@
+.TH "TDrawing" "3" "February 2020" "hmi" ""
+
+.SH NAME
+TDrawing \- drawing class, usually containing objects of TElement descendants, that is drawn on a control's canvas
+
+.SH Description
+TDrawing or a descendant is used to draw a graphical image for a control at runtime and context sensitive (not necessarily static). Because such drawing is not dependent on a special graphical resolution (like raster graphic images), large images don't require large memory, and small images can be stretched without a loss of quality (resolution). 
+
+.SH METHODS
+.TP
+.B AddElement
+.TP
+.B Draw
+.TP
+.B Shift
+.TP
+.B Rotate
+.TP
+.B Resize
+.TP
+.B Zoom
+.TP
+.B Destroy
+
+.SH Property overview
+.TP
+.BI ElementCount  r
+.TP
+.BI ElementList  r
+.TP
+.BI Elements  r

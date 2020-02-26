@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generated using FPDoc - (c) 2000-2012 FPC contributors and Sebastian Guenther, sg@freepascal.org -->
+<fp-refdoc>
+  <unit name="DrawnControl">
+    <interface>
+      <uses>
+        <unit-ref name="System"/>
+        <unit-ref name="Classes"/>
+        <unit-ref name="SysUtils"/>
+        <unit-ref name="LResources"/>
+        <unit-ref name="Forms"/>
+        <unit-ref name="Controls"/>
+        <unit-ref name="Graphics"/>
+        <unit-ref name="Dialogs"/>
+      </uses>
+      <interface name="IDrawnControl"/>
+      <class name="TElement" visibility="public" parentclass="TComponent">
+        <class_function name="GetVectorDirection" visibility="protected">
+          <return type="Extended"/>
+          <argument name="V" type="TPoint"/>
+        </class_function>
+        <class_function name="GetVectorLength" visibility="protected">
+          <return type="Integer"/>
+          <argument name="V" type="TPoint"/>
+        </class_function>
+        <class_procedure name="SetVectorDirection" visibility="protected">
+          <argument name="V" type="TPoint"/>
+          <argument name="Angle" type="Extended"/>
+        </class_procedure>
+        <class_procedure name="SetVectorLength" visibility="protected">
+          <argument name="V" type="TPoint"/>
+          <argument name="Length" type="Extended"/>
+        </class_procedure>
+        <class_procedure name="VectorRotate" visibility="protected">
+          <argument name="Vec" type="TPoint"/>
+          <argument name="Angle" type="Extended"/>
+        </class_procedure>
+        <class_procedure name="VectorZoom" visibility="protected">
+          <argument name="Vec" type="TPoint"/>
+          <argument name="Factor" type="Extended"/>
+        </class_procedure>
+        <procedure name="Notification" override="true" visibility="protected">
+          <argument name="AComponent" type="TComponent"/>
+          <argument name="Operation" type="TOperation"/>
+        </procedure>
+        <procedure name="Shift" virtual="true" abstract="true" visibility="protected">
+          <argument name="V" type="TPoint"/>
+        </procedure>
+        <procedure name="Rotate" virtual="true" abstract="true" visibility="protected">
+          <argument name="CP" type="TPoint"/>
+          <argument name="Angle" type="Extended"/>
+        </procedure>
+        <procedure name="Zoom" virtual="true" abstract="true" visibility="protected">
+          <argument name="CP" type="TPoint"/>
+          <argument name="Factor" type="Extended"/>
+        </procedure>
+        <destructor name="Destroy" override="true" visibility="public"/>
+        <property name="Brush" type="TBrush"/>
+        <property name="Pen" type="TPen"/>
+        <property name="Control" type="TGraphicControl" writable="true"/>
+      </class>
+      <class name="TLine" visibility="public" parentclass="TElement">
+        <procedure name="Shift" override="true" visibility="protected">
+          <argument name="V" type="TPoint"/>
+        </procedure>
+        <procedure name="Rotate" override="true" visibility="protected">
+          <argument name="CP" type="TPoint"/>
+          <argument name="Angle" type="Extended"/>
+        </procedure>
+        <procedure name="Zoom" override="true" visibility="protected">
+          <argument name="CP" type="TPoint"/>
+          <argument name="Factor" type="Extended"/>
+        </procedure>
+        <procedure name="Draw" override="true" visibility="protected"/>
+        <property name="Angle" type="Extended" writable="true"/>
+        <property name="Length" type="Integer" writable="true"/>
+        <property name="SP" type="TPoint" writable="true"/>
+        <property name="EP" type="TPoint" writable="true"/>
+      </class>
+      <class name="TRotativePointer" visibility="published" parentclass="TElement">
+        <procedure name="Rotate" override="true" visibility="protected">
+          <argument name="CP" type="TPoint"/>
+          <argument name="Angle" type="Extended"/>
+        </procedure>
+        <procedure name="Shift" override="true" visibility="protected">
+          <argument name="V" type="TPoint"/>
+        </procedure>
+        <procedure name="Zoom" override="true" visibility="protected">
+          <argument name="CP" type="TPoint"/>
+          <argument name="Factor" type="Extended"/>
+        </procedure>
+        <property name="Center" type="TPoint" writable="true"/>
+        <property name="Angle" type="Extended" writable="true"/>
+        <property name="Offset" type="Extended" writable="true"/>
+        <property name="Radius" type="Integer" writable="true"/>
+      </class>
+      <class name="TRectangle" visibility="published" parentclass="TElement">
+        <procedure name="Draw" override="true" visibility="protected"/>
+        <procedure name="Rotate" override="true" visibility="protected">
+          <argument name="CP" type="TPoint"/>
+          <argument name="Angle" type="Extended"/>
+        </procedure>
+        <procedure name="Shift" override="true" visibility="protected">
+          <argument name="V" type="TPoint"/>
+        </procedure>
+        <procedure name="Zoom" override="true" visibility="protected">
+          <argument name="CP" type="TPoint"/>
+          <argument name="Factor" type="Extended"/>
+        </procedure>
+        <property name="Height" type="Integer" writable="true"/>
+        <property name="Left" type="Integer" writable="true"/>
+        <property name="Top" type="Integer" writable="true"/>
+        <property name="Width" type="Integer" writable="true"/>
+      </class>
+      <class name="TCircle" visibility="published" parentclass="TElement">
+        <property name="Center" type="TPoint" writable="true"/>
+        <property name="Diameter" type="Integer" writable="true"/>
+        <property name="Radius" type="Integer" writable="true"/>
+      </class>
+      <class name="TDrawing" visibility="protected" parentclass="TElement">
+        <function name="AddElement" visibility="protected">
+          <return type="Integer"/>
+          <argument name="AElement" type="TElement"/>
+        </function>
+        <procedure name="Draw" override="true" visibility="protected"/>
+        <procedure name="Shift" override="true" visibility="protected">
+          <argument name="V" type="TPoint"/>
+        </procedure>
+        <procedure name="Rotate" override="true" visibility="protected">
+          <argument name="CP" type="TPoint"/>
+          <argument name="Angle" type="Extended"/>
+        </procedure>
+        <procedure name="Resize" override="true" visibility="protected"/>
+        <procedure name="Zoom" override="true" visibility="protected">
+          <argument name="CP" type="TPoint"/>
+          <argument name="Factor" type="Extended"/>
+        </procedure>
+        <property name="ElementCount" type="Integer"/>
+        <property name="ElementList" type="TFpList"/>
+        <property name="Elements" type="TElement">
+          <argument name="Index" type="Integer"/>
+        </property>
+        <destructor name="Destroy" override="true" visibility="public"/>
+      </class>
+      <class name="TDrawnControl" visibility="public" parentclass="TGraphicControl">
+        <function name="GetDrawing" visibility="protected">
+          <return type="TDrawing"/>
+        </function>
+        <class_function name="GetDrawingClass" virtual="true" visibility="protected">
+          <return type="TDrawingClass"/>
+        </class_function>
+        <procedure name="Paint" override="true" visibility="protected"/>
+        <procedure name="Resize" override="true" visibility="protected"/>
+        <procedure name="SetParent" override="true" visibility="protected">
+          <argument name="NewParent" type="TWinControl"/>
+        </procedure>
+        <property name="Drawing" type="TDrawing"/>
+      </class>
+      <alias name="TDrawingClass" type="TDrawing"/>
+      <procedure name="Register"/>
+    </interface>
+  </unit>
+</fp-refdoc>
