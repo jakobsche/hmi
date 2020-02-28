@@ -62,7 +62,7 @@ type
 
   TClock = class(TDrawing)
   private
-    FFrame: TRectangle;
+    FFrame: TWSRectangle;
     FCenter: TPoint;
     FDiameter: Integer;
     FHourPtr, FMinPtr, FSecPtr: TRotativePointer;
@@ -82,7 +82,7 @@ type
   public
     constructor Create(AOwner: TComponent); override;
     property Center: TPoint read FCenter write SetCenter;
-    property Frame: TRectangle read FFrame write FFrame;
+    property Frame: TWSRectangle read FFrame write FFrame;
     property Scale: TClockScale read FScale write FScale;
     property HourPtr: TRotativePointer read FHourPtr write FHourPtr;
     property MinPtr: TRotativePointer read FMinPtr write FMinPtr;
@@ -374,7 +374,7 @@ var
   MinPtrRadius, i: Integer;
 begin
   inherited Create(AOwner);
-  Frame := TRectangle.Create(Self);
+  Frame := TWSRectangle.Create(Self);
   Frame.Brush.Color := clOlive;
   Frame.Pen.Color := $2080E0;
   Frame.Pen.Width := 8;

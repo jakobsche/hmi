@@ -94,9 +94,9 @@ type
     property Radius: Integer read FRadius write FRadius;
   end;
 
-  { TRectangle }
+  { TWSRectangle }
 
-  TRectangle = class(TElement)
+  TWSRectangle = class(TElement)
   private
     FR: TRect;
     function GetHeight: Integer;
@@ -189,55 +189,55 @@ begin
   RegisterComponents('HMI',[]);
 end;
 
-{ TRectangle }
+{ TWSRectangle }
 
-procedure TRectangle.SetHeight(AValue: Integer);
+procedure TWSRectangle.SetHeight(AValue: Integer);
 begin
   FR.Height := AValue;
 end;
 
-function TRectangle.GetHeight: Integer;
+function TWSRectangle.GetHeight: Integer;
 begin
   Result := FR.Height;
 end;
 
-function TRectangle.GetLeft: Integer;
+function TWSRectangle.GetLeft: Integer;
 begin
   Result := FR.Left;
 end;
 
-function TRectangle.GetTop: Integer;
+function TWSRectangle.GetTop: Integer;
 begin
   Result := FR.Top;
 end;
 
-function TRectangle.GetWidth: Integer;
+function TWSRectangle.GetWidth: Integer;
 begin
   Result := FR.Width;
 end;
 
-procedure TRectangle.SetLeft(AValue: Integer);
+procedure TWSRectangle.SetLeft(AValue: Integer);
 begin
   FR.Left := AValue;
 end;
 
-procedure TRectangle.SetTop(AValue: Integer);
+procedure TWSRectangle.SetTop(AValue: Integer);
 begin
   FR.Top := AValue;
 end;
 
-procedure TRectangle.SetWidth(AValue: Integer);
+procedure TWSRectangle.SetWidth(AValue: Integer);
 begin
   FR.Width := AValue;
 end;
 
-procedure TRectangle.Draw;
+procedure TWSRectangle.Draw;
 begin
   inherited Draw;
   Control.Canvas.Rectangle(FR);
 end;
 
-procedure TRectangle.Rotate(CP: TPoint; Angle: Extended);
+procedure TWSRectangle.Rotate(CP: TPoint; Angle: Extended);
 var V1, V2: TPoint;
 begin
   V1 := FR.TopLeft - CP;
@@ -248,12 +248,12 @@ begin
   FR.BottomRight := CP + V2;
 end;
 
-procedure TRectangle.Shift(V: TPoint);
+procedure TWSRectangle.Shift(V: TPoint);
 begin
   FR.Offset(V)
 end;
 
-procedure TRectangle.Zoom(CP: TPoint; Factor: Extended);
+procedure TWSRectangle.Zoom(CP: TPoint; Factor: Extended);
 var V: TPoint;
 begin
   V := FR.TopLeft - CP;

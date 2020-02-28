@@ -23,6 +23,7 @@ fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=rtf --ve
 
 fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=txt --verbose --write-project=hmi-txt.dp --output=./src-doc/hmi.txt
  
-fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=xml --verbose --write-project=hmi-xml.dp --output=./src-doc/fpdoc-xml
+# fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=xml --verbose --write-project=hmi-xml.dp --output=./src-doc/fpdoc-xml
 
 # fpdoc --input-dir=. --package=HMI --content --descr-dir=./docs --format=dxml --verbose --write-project=hmi-dxml.dp --output=./src-doc/dxml
+
